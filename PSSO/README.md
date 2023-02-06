@@ -1,1 +1,1 @@
-# Programs Spectral Similarity Optimized (PSS_O)
+# Programs Spectral Similarity Optimized (PSSO)
