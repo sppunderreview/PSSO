@@ -24,7 +24,7 @@ For instance, a function embedding requires a learning phase, embedding generati
 Only then should MDs be computed.
 
 ## Miscellaneous
-BinKit, IoT, and Windows datasets are not included. However, each program's embedding, and complete results are included.
-Disassembling requires IDA Pro under a Linux system.
-The Asm2vecJava folder contains the Java source code for Asm2Vec, while Asm2Vec contains results.
-Gencoding produces Gemini inputs from raw programs.
+- BinKit, IoT, and Windows datasets are not included. However, each program's embedding, and complete results are included.
+- Disassembling requires IDA Pro under a Linux system.
+- The Asm2vecJava folder contains the Java source code for Asm2Vec, while Asm2Vec contains results.
+- Gencoding produces Gemini inputs from raw programs.
