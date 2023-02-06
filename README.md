@@ -15,8 +15,8 @@ Paths have to be corrected:
 2. Inside scripts for frameworks, such as "MutantX-S/" folder.
 
 Inside a framework folder:
-* 'RunMakeMD3.py' computes all distances.
-* 'RunMakeMD.py'  use distances to get test fields.
+* 'RunMakeMD3.py' computes all similarity indices.
+* 'RunMakeMD.py'  use indices to compute test fields result.
 
 ### Some frameworks have a complex workflow
 For instance, a function embedding requires a learning phase, embedding generation, and distance computation.
