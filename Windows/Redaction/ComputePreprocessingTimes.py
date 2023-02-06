@@ -8,7 +8,7 @@ with open("preprocessQSCG", "rb") as f:
 	preprocessQSCG = pickle.load(f)
 
 # Adjust runnting times:
-# because for PSS preprocessing some very large programs where run with multiple processors
+# because for PSS preprocessing some very large programs were run with multiple processors
 # , depending on number of nodes, a coefficient is applied to recover a comparable runtime
 for idS in preprocessQPSS:
 	if preprocessQPSS[idS][1] > 60000:
@@ -26,7 +26,7 @@ LC =  ["PSS","GSA"]
 
 for nEmb in LC:
     LATEX = ""
-    for nQBI in [ "QB","QB40k", "QB20K"]:
+    for nQBI in [ "QB"]:
         with open(nQBI, "rb") as f:
             E = pickle.load(f) # [Q,B,I,QNames]
             Q = E[0]
@@ -52,9 +52,9 @@ for nEmb in LC:
 
 """
 PSS
-663494.73 & 337019.43 & 162490.16 &
+162490.16 &
 ASCG
-643847.97 & 326800.42 & 157674.07 &
+157674.07 &
 """
 
 
