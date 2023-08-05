@@ -1,18 +1,17 @@
 #!/usr/bin/python3
 
-# ? ?
-# 2021
-# ?
+import os
 
 def readAllSamples():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])
 	L = []
-	with open("C:\\Users\\?\\Desktop\\GUtilsOptions\\samples.txt", "r") as f:
+	with open(os.path.join(ABS_PATH, "samples.txt"), "r") as f:
 		nbP = int(f.readline().strip())
 		for i in range(nbP):
 			idS = int(f.readline().strip()) 
 			path = f.readline().strip()
 			name = path.split("/")[-1]			
-			pathJson = "C:\\Users\\?\\Desktop\\GUtilsOptions\\json\\"+str(idS)+".tmp0.json"
+			pathJson = os.path.join(ABS_PATH, "json", str(idS)+".tmp0.json")
 			option = path.split("/")[-3][-2:]
 			L += [(idS,path,option,name, pathJson)]
 	return L
