@@ -6,7 +6,6 @@ import h5py
 import random
 from tqdm import tqdm
 
-"""
 
 def loadTensor(path):
     return cv2.imread(path,0) 
@@ -16,11 +15,11 @@ def loadPair(path):
     pairB = loadTensor(path+"##B.jpeg")
     return (pairA, pairB)
     
-pathDataset = "C:\\Users\\?\\Desktop\\alphadiff-dataset-master\\dataset\\data"
+pathDataset = "alphadiff-dataset-master/dataset/data"
 
 # 25%
-# Compressé   =>  1 Go
-# Décompressé => 50 Go
+# Unzipped   =>  1 Go
+# Zipped => 50 Go
 
 h5f = h5py.File('datasetAD.h5', 'w')
 
@@ -41,6 +40,6 @@ for o in tqdm(os.listdir(pathDataset)):
 
 print("# pairs", p)
 h5f.close()
-"""
+
 
 # 625 318 pairs

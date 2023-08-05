@@ -6,7 +6,7 @@
 #
 
 import sys
-sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsOptions")
+sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
 
 from makeBenchUO import benchmarkUO
 import pickle
@@ -39,6 +39,7 @@ asm = ""
 arch = "x86"
 bits = 64
 
+# Has to be changed for each 6 datasets, sorry
 O0,O1 = benchmarkUO("O0","O1")
 O2,O3 = benchmarkUO("O2","O3")
 All = O0+O1+O2+O3
@@ -69,7 +70,7 @@ for (idS, path, compilerOption, name, pathJson) in All:
         function_embedding = safe(tensor, length).detach().numpy()
         functionsData[idFunction] = (nameF, function_embedding)
      
-    pathOutput = "UO\\"+idProgram
+    pathOutput = "UO/"+idProgram
     
     with open(pathOutput, "wb") as f:
         pickle.dump(functionsData,f)

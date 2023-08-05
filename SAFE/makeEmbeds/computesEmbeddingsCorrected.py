@@ -6,7 +6,7 @@
 #
 
 import sys
-sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigOptions")
+sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
 
 from correctBenchBO import readToCorrect
 
@@ -66,7 +66,7 @@ for (idS, path, compilerOption, name, pathJson) in readToCorrect():
         function_embedding = safe(tensor, length).detach().numpy()
         functionsData[idFunction] = (nameF, function_embedding)
      
-    pathOutput = "BOC\\"+idProgram
+    pathOutput = "BOC/"+idProgram
     
     with open(pathOutput, "wb") as f:
         pickle.dump(functionsData,f)

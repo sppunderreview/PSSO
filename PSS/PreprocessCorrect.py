@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, "/home/?/GBigOptions")
+sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
 
 from Prototype import computeEmbedding
 import pickle

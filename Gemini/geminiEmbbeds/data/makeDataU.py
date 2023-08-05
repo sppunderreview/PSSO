@@ -1,7 +1,7 @@
 import sys
 
-sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsVersions")
-sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsOptions")
+sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
+sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
 
 from makeBenchUO import benchmarkUO
 from makeBenchUV import benchmarkUV

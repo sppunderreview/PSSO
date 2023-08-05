@@ -82,10 +82,10 @@ def run(O, nameXP):
 
 if __name__ == '__main__':
     import sys
-    sys.path.insert(0, "/home/?/GBigOptions")
-    sys.path.insert(0, "/home/?/GBigVersions")
-    sys.path.insert(0, "/home/?/GCoreutilsVersions")
-    sys.path.insert(0, "/home/?/GCoreutilsOptions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CO 
 
     from makeBenchBO import benchmarkBO
     from makeBenchBV import benchmarkBV
@@ -151,8 +151,8 @@ if __name__ == '__main__':
     run(P6D,"CO2O3")
 
     import sys
-    sys.path.insert(0, "/home/?/GUtilsOptions")
-    sys.path.insert(0, "/home/?/GUtilsVersions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
 
     from makeBenchUO import benchmarkUO
     from makeBenchUV import benchmarkUV

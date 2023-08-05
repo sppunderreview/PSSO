@@ -73,12 +73,12 @@ def run(OA, OB, idP, maxID, nameXP):
 if __name__ == '__main__':
     import sys
 
-    sys.path.insert(0, "/home/?/GCoreutilsVersions")
-    sys.path.insert(0, "/home/?/GCoreutilsOptions")    
-    sys.path.insert(0, "/home/?/GUtilsVersions")
-    sys.path.insert(0, "/home/?/GUtilsOptions")    
-    sys.path.insert(0, "/home/?/GBigOptions")
-    sys.path.insert(0, "/home/?/GBigVersions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BV 
 
     from makeBenchCV import benchmarkCV
     from makeBenchCO import benchmarkCO

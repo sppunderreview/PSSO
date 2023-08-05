@@ -6,8 +6,8 @@ def computeEmbedding(inputs):
     embeds = {}
     for (idS,path,compilerOption,name, pathJson) in inputs:        
         start = time.time()
-        pathToSample = pathJson.split("\\json")[0]+"\\samples\\"+str(idS)        
-        P = subprocess.run(['strings.exe', pathToSample], stdout=subprocess.PIPE)
+        pathToSample = pathJson.split("/json")[0]+"/samples/"+str(idS)        
+        P = subprocess.run(['strings', pathToSample], stdout=subprocess.PIPE)
         result = P.stdout.decode('utf-8')
         stringMultiSet = {}
         for s in result.split("\n"):

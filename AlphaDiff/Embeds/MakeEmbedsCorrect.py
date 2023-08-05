@@ -12,7 +12,7 @@ def run(O, folder):
     
 if __name__ == '__main__':
     import sys
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigOptions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
     from correctBenchBO import readToCorrect
     
     run(readToCorrect(),"BOC")

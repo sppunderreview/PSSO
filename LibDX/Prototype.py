@@ -15,9 +15,9 @@ def computeEmbedding(inputs):
     embeds = {}
     for (idS,path,compilerOption,name, pathJson) in inputs:        
         start = time.time()
-        pathToSample = pathJson.split("\\json")[0]+"\\samples\\"+str(idS)        
+        pathToSample = pathJson.split("/json")[0]+"/samples/"+str(idS)        
         
-        P = subprocess.run(['readelf.exe', "-x", ".rodata", pathToSample], stdout=subprocess.PIPE)
+        P = subprocess.run(['readelf', "-x", ".rodata", pathToSample], stdout=subprocess.PIPE)
         result = P.stdout.decode('utf-8')
         # Parse output
         hexdump = ""

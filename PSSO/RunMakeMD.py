@@ -50,10 +50,10 @@ def run(O, nameXP):
     
 if __name__ == '__main__':
     import sys
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigOptions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigVersions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GCoreutilsVersions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GCoreutilsOptions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CO 
 
     from makeBenchBO import benchmarkBO
     from makeBenchBV import benchmarkBV
@@ -192,8 +192,8 @@ if __name__ == '__main__':
     p6.join()
 
     import sys
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsOptions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsVersions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
 
     from makeBenchUO import benchmarkUO
     from makeBenchUV import benchmarkUV

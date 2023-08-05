@@ -29,12 +29,12 @@ def run(O, nameXP):
 
 if __name__ == '__main__':
     import sys
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigOptions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigVersions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GCoreutilsVersions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GCoreutilsOptions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsVersions")
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GUtilsOptions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
 
     from makeBenchBO import readAllSamples as allBO
     from makeBenchBV import readAllSamples as allBV

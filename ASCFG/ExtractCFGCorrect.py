@@ -6,15 +6,15 @@ import os
 
 if __name__ == '__main__':
     import sys
-    sys.path.insert(0, "C:\\Users\\?\\Desktop\\GBigOptions")
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
     from correctBenchBO import readToCorrect
 
     for (idS,path,compilerOption,name, pathJson) in readToCorrect():
         start = time.time()
         
-        pathInput = "\\".join(pathJson.split("\\")[:-2]) + "\\samples\\"+str(idS)        
+        pathInput = "/".join(pathJson.split("/")[:-2]) + "/samples/"+str(idS)        
         pathOutput = "./CFG/"+nameXP[0:2]+"/" + str(idS)+".dot"
-        command = "C:/Users/?/Desktop/cfgbuilder "+pathInput+" > "+pathOutput
+        command = "cfgbuilder "+pathInput+" > "+pathOutput
         
         os.system(command)
         elasped = time.time()-start
