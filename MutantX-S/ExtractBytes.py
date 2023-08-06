@@ -1,18 +1,17 @@
 import time
-from os import system
+import os
 from multiprocessing import Process
 
-
-def extractBytesFromProgram(nameDS, idS, subPath):
-    pathIntput = "/home/?/Documents/Travail/?/"+subPath+"/samples/"+str(idS) 
+def extractBytesFromProgram(nameDS, idS, subPath):	
+    pathIntput = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-2]), "Basic", "G"+subPath, "samples", str(idS) )
     pathIdaOut = pathIntput+"_bytes.json"    
-    pathOutput = "./"+nameDS+"/bytes_" + str(idS)+".json"
-    
-    command = "/home/?/idapro-7.5/idat64 -A -S/home/?/Documents/Travail/?/MutantX/ExtractBytesViaIDA.py "+pathIntput
+    pathOutput = "./bytes/"+nameDS+"/bytes_" + str(idS)+".json"    
+    pathScript = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-1]), "ExtractBytesViaIDA.py")
+    command = "idat64"+ " -A -S"+pathScript+" "+pathIntput
     commandCopy = "cp "+pathIdaOut+" "+pathOutput
 
-    system(command)
-    system(commandCopy)
+    os.system(command)
+    os.system(commandCopy)
     
 
 if __name__ == '__main__':
