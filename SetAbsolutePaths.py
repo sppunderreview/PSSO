@@ -14,8 +14,8 @@ for path in filesInsidePSSO:
 				filesDetectedPythonIncludeBasic[path] = True
 				break
 
-print(len(filesDetectedPythonIncludeBasic))
-print(filesDetectedPythonIncludeBasic)
+#print(len(filesDetectedPythonIncludeBasic))
+#print(filesDetectedPythonIncludeBasic)
 
 # Ask user
 print("Enter the absolute path to 'PSSO/Basic' folder:")
@@ -42,7 +42,7 @@ for path in filesDetectedPythonIncludeBasic:
 			else:
 				nL += [t]
 
-	"""T = "".join(nL)
+	T = "".join(nL)
 	with open(path, "w") as f2:
-		f2.write(T)"""
+		f2.write(T)
 
