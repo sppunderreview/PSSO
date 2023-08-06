@@ -1,4 +1,4 @@
-# Artifact - Scalable Program Clone Search Through Spectral Analysis
+# Artifact - Scalable Program Clone Search Through Spectral Analyss
 
 ## Abstract
 We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection.
@@ -44,4 +44,4 @@ This work is supported by (i) a public grant overseen by the French National Res
 
 Experiments presented in this paper were carried out using the Grid'5000 experimental testbed, being developed under the INRIA ALADDIN development action with support from CNRS, RENATER and several Universities as well as other funding bodies (see https://www.grid5000.fr).
 
-#
+##
