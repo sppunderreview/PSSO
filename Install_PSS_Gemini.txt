@@ -1,0 +1,6 @@
+conda create --name PSS_Gemini --file requirements_PSS_Gemini.txt
+conda activate PSS_Gemini
+pip3 install tensorflow==1.4.0
+pip3 install matplotlib
+pip3 install scikit-learn
+pip3 install tqdm

@@ -1,0 +1,4 @@
+# platform: debian
+python=2.7.*
+pip=19.3.1
+networkx=2.2

@@ -1,0 +1,40 @@
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 49025 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 64888; Total 12520267;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 25008 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 16656 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 20479; Total 3969172;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 50102 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 21015 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 32838; Total 5624785;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 32200 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 26743 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 42631; Total 6337571;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 41619 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 34250 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 48735; Total 7074468;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 36748 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 39398 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 48021; Total 9013396;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 24526 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 60771 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 67827; Total 14343925;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 29865 documents
+[main] INFO asmvec.Asm2VecCloneDetector - TRAIN PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 32934 documents
+[main] INFO asmvec.LearnerAsm2Vec - Vocab 46920; Total 6735989;
+[main] INFO asmvec.Asm2VecCloneDetector - TEST PHASE
+[main] INFO asmvec.Asm2VecCloneDetector - Total 21238 documents

@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+/home/tristan/Documents/Travail/These/Artefact/Basic/DataGenerator/JsonExtractor/.metadata/.plugins/org.eclipse.jdt.core
+2353153239.index
+3846433983.index
+13220532.index
+612667125.index
+2144547017.index
+4079200060.index
+1865797976.index
+646308851.index
+3809344040.index
+3700033647.index
+3921867400.index
+4039523937.index
+467774718.index
+370067698.index
+1050053892.index
