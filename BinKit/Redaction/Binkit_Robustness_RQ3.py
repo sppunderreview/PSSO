@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 def correctNames(a):
@@ -14,11 +15,11 @@ def correctNames(a):
 	return a
 	
 def readBinkitRobustnessRQ3():
-
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    	
 	testfields = {}
 
 
-	with open("RESULTS.txt", "r") as f:
+	with open(os.path.join(ABS_PATH, "RESULTS.txt"), "r") as f:
 		for l in f.readlines():
 			t = l.split(" ")
 			m = t[0]        
@@ -77,5 +78,3 @@ def readBinkitRobustnessRQ3():
 	print(df)
 	
 	return tableWithGoodNames
-
-readBinkitRobustnessRQ3()

@@ -1,4 +1,7 @@
 import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pickle
 import pandas as pd
 
@@ -41,7 +44,9 @@ def formatTimeAvg(s):
 from Windows_Preprocessing import readTableWindowsPreprocessing
 
 
-def readWindowsSpeedRQ1():	
+def readWindowsSpeedRQ1():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
+
 	frameworksData = {}
 	
 	# Main experiences
@@ -51,7 +56,7 @@ def readWindowsSpeedRQ1():
 	for nEmb in ["LIBDX", "SHAPE","BSIZE","DSIZE", "MUTANTX","PSS","GSA","FUNCTIONSET"]:
 		RESULTS = []
 		for pId in range(P):
-			inputFile = "../XP/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+			inputFile = os.path.join(ABS_PATH,"../XP/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 			with open(inputFile, "rb") as f:
 				RESULTS += pickle.load(f)					
 		ACC = []
@@ -72,7 +77,7 @@ def readWindowsSpeedRQ1():
 	RESULTS = []
 	for pId in range(P):
 	   for RUN in ["","2","3"]:
-		   inputFile = "../StringSet/R/R"+RUN+"_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+		   inputFile = os.path.join(ABS_PATH,"../StringSet/R/R"+RUN+"_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 		   if os.path.isfile(inputFile):
 			   with open(inputFile, "rb") as f:
 				   RESULTS += pickle.load(f)
@@ -98,7 +103,7 @@ def readWindowsSpeedRQ1():
 	nEmb = "PSSV16"
 	RESULTS = []
 	for pId in range(P):
-		inputFile = "../PSSO/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+		inputFile = os.path.join(ABS_PATH,"../PSSO/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 		with open(inputFile, "rb") as f:
 			RESULTS += pickle.load(f)
 	ACC = []

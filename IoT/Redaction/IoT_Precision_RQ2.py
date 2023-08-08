@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import pickle
 
@@ -17,6 +18,7 @@ def correctNames(a):
 	
 
 def readIoTPrecicionRQ2():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
 	frameworksData = {}
 	
 	LC =  ["STRINGS","LIBDX","SHAPE","BSIZE","DSIZE","PSS_D_5535","SCG_D_5535","FUNCTIONSET"]
@@ -25,7 +27,7 @@ def readIoTPrecicionRQ2():
 	for nEmb in LC:
 		RESULTS = []
 		for pId in range(P):
-			inputFile = "../XP/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+			inputFile = os.path.join(ABS_PATH, "../XP/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 			with open(inputFile, "rb") as f:
 				RESULTS += pickle.load(f)
 		ACC = []
@@ -48,7 +50,7 @@ def readIoTPrecicionRQ2():
 	for nEmb in LC:
 		RESULTS = []
 		for pId in range(P):
-			inputFile = "../MutantXSV2_PSSO/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+			inputFile = os.path.join(ABS_PATH, "../MutantXSV2_PSSO/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 			with open(inputFile, "rb") as f:
 				RESULTS += pickle.load(f)
 		ACC = []

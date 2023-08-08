@@ -1,25 +1,28 @@
+import os
 import pickle
 import pandas as pd
 
 def readTableWindowsPreprocessing():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
+
 	frameworksPlot = {}
 
 	nQBI = "QB"
-	with open(nQBI, "rb") as f:
+	with open(os.path.join(ABS_PATH,nQBI), "rb") as f:
 		E = pickle.load(f) # [Q,B,I,QNames]
 		Q = E[0]
 
-	with open("preprocessQPSS", "rb") as f:
+	with open(os.path.join(ABS_PATH,"preprocessQPSS"), "rb") as f:
 		preprocessQPSS = pickle.load(f)
 
-	with open("preprocessQASCG", "rb") as f:
+	with open(os.path.join(ABS_PATH,"preprocessQASCG"), "rb") as f:
 		preprocessQASCG = pickle.load(f)
 
-	with open("preprocessQPSSO", "rb") as f:
+	with open(os.path.join(ABS_PATH,"preprocessQPSSO"), "rb") as f:
 		preprocessQPSSO = pickle.load(f)
 
 		
-	with open("SPECTRUM_PREPROCESSING_PSS_CORRECTED", "rb") as f:
+	with open(os.path.join(ABS_PATH,"SPECTRUM_PREPROCESSING_PSS_CORRECTED"), "rb") as f:
 		SPECTRUM_PSSC = pickle.load(f)
 
 	# Correct runnting times for large graphs (see the README):

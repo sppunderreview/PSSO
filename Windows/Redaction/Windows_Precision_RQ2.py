@@ -14,7 +14,9 @@ def correctNames(a):
 	a = a.replace("LIBDX", "LibDX")
 	return a
 
-def readWindowsPrecisionRQ2():	
+def readWindowsPrecisionRQ2():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
+
 	frameworksData = {}
 	
 	# Main experiences
@@ -24,7 +26,7 @@ def readWindowsPrecisionRQ2():
 	for nEmb in ["LIBDX", "SHAPE","BSIZE","DSIZE", "MUTANTX","PSS","GSA","FUNCTIONSET"]:
 		RESULTS = []
 		for pId in range(P):
-			inputFile = "../XP/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+			inputFile = os.path.join(ABS_PATH,"../XP/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 			with open(inputFile, "rb") as f:
 				RESULTS += pickle.load(f)					
 		ACC = []
@@ -42,7 +44,7 @@ def readWindowsPrecisionRQ2():
 	RESULTS = []
 	for pId in range(P):
 	   for RUN in ["","2","3"]:
-		   inputFile = "../StringSet/R/R"+RUN+"_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+		   inputFile = os.path.join(ABS_PATH,"../StringSet/R/R"+RUN+"_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 		   if os.path.isfile(inputFile):
 			   with open(inputFile, "rb") as f:
 				   RESULTS += pickle.load(f)
@@ -63,7 +65,7 @@ def readWindowsPrecisionRQ2():
 	nEmb = "PSSV16"
 	RESULTS = []
 	for pId in range(P):
-		inputFile = "../PSSO/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+		inputFile = os.path.join(ABS_PATH,"../PSSO/R/R_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 		with open(inputFile, "rb") as f:
 			RESULTS += pickle.load(f)
 	ACC = []

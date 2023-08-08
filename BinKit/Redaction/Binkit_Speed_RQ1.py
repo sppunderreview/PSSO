@@ -1,3 +1,7 @@
+import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pickle
 import pandas as pd
 
@@ -40,11 +44,12 @@ def formatTimeAvg(s):
 
 from Binkit_Preprocessing import readTableBinkitPreprocessing
 
-def readBinkitSpeedRQ1():    
-	with open("ELAPSED_SCs_NORMAL", "rb") as f:
+def readBinkitSpeedRQ1():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
+	with open(os.path.join(ABS_PATH,"ELAPSED_SCs_NORMAL"), "rb") as f:
 		ELAPSED_SCs_NORMAL  = pickle.load(f)
 
-	with open("ELAPSED_SCs_OBF", "rb") as f:
+	with open(os.path.join(ABS_PATH, "ELAPSED_SCs_OBF"), "rb") as f:
 		ELAPSED_SCs_OBF = pickle.load(f)
 
 	#print([x for x in ELAPSED_SCs_NORMAL])

@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 
 def correctNames(a):
@@ -15,9 +16,11 @@ def correctNames(a):
 
 
 def readBinkitPrecisionRQ2():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
+
 	testfields = {}
 
-	with open("RESULTS.txt", "r") as f:
+	with open(os.path.join(ABS_PATH, "RESULTS.txt"), "r") as f:
 		for l in f.readlines():
 			t = l.split(" ")
 			m = t[0]        

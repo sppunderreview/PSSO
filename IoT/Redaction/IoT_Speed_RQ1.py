@@ -1,3 +1,7 @@
+import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pandas as pd
 import pickle
 
@@ -42,6 +46,8 @@ def formatTimeAvg(s):
 from IoT_Preprocessing import readTableIoTPreprocessing
 
 def readIoTSpeedRQ1():
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
+
 	frameworksData = {}
 	
 	LC =  ["STRINGS","LIBDX","SHAPE","BSIZE","DSIZE","PSS_D_5535","SCG_D_5535","FUNCTIONSET"]
@@ -50,7 +56,7 @@ def readIoTSpeedRQ1():
 	for nEmb in LC:
 		RESULTS = []
 		for pId in range(P):
-			inputFile = "../XP/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+			inputFile = os.path.join(ABS_PATH, "../XP/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 			with open(inputFile, "rb") as f:
 				RESULTS += pickle.load(f)
 		ESC = []
@@ -70,7 +76,7 @@ def readIoTSpeedRQ1():
 	for nEmb in LC:
 		RESULTS = []
 		for pId in range(P):
-			inputFile = "../MutantXSV2_PSSO/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN)
+			inputFile = os.path.join(ABS_PATH, "../MutantXSV2_PSSO/R/R_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
 			with open(inputFile, "rb") as f:
 				RESULTS += pickle.load(f)
 		ESC = []

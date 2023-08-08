@@ -1,11 +1,13 @@
+import os
 import pickle
 import pandas as pd
 
 def readTableBinkitPreprocessing():
-	with open("ELAPSED_SCs_NORMAL", "rb") as f:
+	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    	
+	with open(os.path.join(ABS_PATH,"ELAPSED_SCs_NORMAL"), "rb") as f:
 		ELAPSED_SCs_NORMAL  = pickle.load(f)
 
-	with open("ELAPSED_SCs_OBF", "rb") as f:
+	with open(os.path.join(ABS_PATH, "ELAPSED_SCs_OBF"), "rb") as f:
 		ELAPSED_SCs_OBF = pickle.load(f)
 
 	#print([x for x in ELAPSED_SCs_NORMAL])
@@ -20,7 +22,7 @@ def readTableBinkitPreprocessing():
 			else:
 				ELAPSED_SCs[nEmb][idS] += ELAPSED_SCs_OBF[nEmb][idS]
 
-	with open("Preproccesing_EMBEDS", "rb") as f:
+	with open(os.path.join(ABS_PATH, "Preproccesing_EMBEDS"), "rb") as f:
 		QP_EMBS = pickle.load(f)
 
 	frameworksPlot = {}
