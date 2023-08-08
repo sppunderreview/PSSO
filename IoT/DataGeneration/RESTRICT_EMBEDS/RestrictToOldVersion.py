@@ -1,6 +1,6 @@
 import pickle
 
-embeds = ["preprocessQSCG","preprocessQPSS","MUTANTX2","PSSV16","PSS_D_5535","LIBDX","STRINGS","SCG_D_5535","FUNCTIONSET","SHAPE","BSIZE","DSIZE"]
+embeds = ["preprocessQSCG","preprocessQPSSO","preprocessQPSS","MUTANTX2","PSSV16","PSS_D_5535","LIBDX","STRINGS","SCG_D_5535","FUNCTIONSET","SHAPE","BSIZE","DSIZE"]
 
 with open("idS_Old_Version", "rb") as f:
 	idSOV = pickle.load(f)
