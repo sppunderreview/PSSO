@@ -13,7 +13,7 @@ def correctNames(a):
 	a = a.replace("FUNCTIONSET", "FunctionSet")
 	a = a.replace("SHAPE", "Shape")
 	a = a.replace("STRINGS", "StringSet")
-	a = a.replace("LibDX", "LibDX")
+	a = a.replace("LIBDX", "LibDX")
 	return a
 	
 

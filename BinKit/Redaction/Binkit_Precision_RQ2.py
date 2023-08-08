@@ -3,7 +3,7 @@ import pandas as pd
 
 def correctNames(a):
 	a = a.replace("PSSV16", "PSSO")
-	a = a.replace("SCG ", "ASCG")
+	a = a.replace("SCG", "ASCG")
 	a = a.replace("MUTANTX2", "MutantX-S")
 	a = a.replace("MUTANTX", "REMOVED")
 	a = a.replace("DSIZE", "Dsize")
@@ -11,7 +11,7 @@ def correctNames(a):
 	a = a.replace("FUNCTIONSET", "FunctionSet")
 	a = a.replace("SHAPE", "Shape")
 	a = a.replace("STRINGS", "StringSet")
-	a = a.replace("LibDX", "LibDX")
+	a = a.replace("LIBDX", "LibDX")
 	return a
 
 

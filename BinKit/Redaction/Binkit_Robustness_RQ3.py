@@ -11,7 +11,7 @@ def correctNames(a):
 	a = a.replace("FUNCTIONSET", "FunctionSet")
 	a = a.replace("SHAPE", "Shape")
 	a = a.replace("STRINGS", "StringSet")
-	a = a.replace("LibDX", "LibDX")
+	a = a.replace("LIBDX", "LibDX")
 	return a
 	
 def readBinkitRobustnessRQ3():
@@ -74,7 +74,7 @@ def readBinkitRobustnessRQ3():
 			tableWithGoodNames[x][f] = testfieldsS[x][y]
 		
 	df = pd.DataFrame(tableWithGoodNames)
-	print("Table (RQ2)(RQ3) Precision scores on the BinKit dataset")
+	print("Table (RQ2,RQ3) Precision scores on the BinKit dataset.")
 	print(df)
 	
 	return tableWithGoodNames

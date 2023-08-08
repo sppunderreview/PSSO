@@ -74,11 +74,11 @@ def readWindowsPrecisionRQ2():
 	frameworksData["PSSO"] = {}
 	frameworksData["PSSO"]["AVG"] = "{:.3f}".format(sum(ACC)/len(ACC))
 
-	df = pd.DataFrame(frameworksData).T
-	df.fillna(0, inplace=True)		
-	print(df)
+	#df = pd.DataFrame(frameworksData).T
+	#df.fillna(0, inplace=True)		
+	#print(df)
 	
 	return frameworksData
 
-readWindowsPrecisionRQ2()
+#readWindowsPrecisionRQ2()
 
