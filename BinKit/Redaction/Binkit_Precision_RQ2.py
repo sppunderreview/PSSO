@@ -58,9 +58,9 @@ def readBinkitPrecisionRQ2():
 		frameworkPlot[m] = {}
 		frameworkPlot[m]["AVG"] = "{:.3f}".format(score)
 		
-	df = pd.DataFrame(frameworkPlot).T
-	df.fillna(0, inplace=True)
-	print(df)	
+	#df = pd.DataFrame(frameworkPlot).T
+	#df.fillna(0, inplace=True)
+	#print(df)	
 	return frameworkPlot
 
-readBinkitPrecisionRQ2()
+#readBinkitPrecisionRQ2()

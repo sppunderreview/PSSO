@@ -102,10 +102,10 @@ def readIoTSpeedRQ1():
 		if f in tablePreprocessing:
 			frameworksData[f]["Total"] += " ("+formatTime(tablePreprocessing[f]["Total"]) + ")"
 	
-	df = pd.DataFrame(frameworksData).T
-	df.fillna(0, inplace=True)
-	print(df)
+	#df = pd.DataFrame(frameworksData).T
+	#df.fillna(0, inplace=True)
+	#print(df)
 	
 	return frameworksData
 
-readIoTSpeedRQ1()
+#readIoTSpeedRQ1()
