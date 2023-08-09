@@ -18,8 +18,9 @@ for path in filesInsidePSSO:
 #print(filesDetectedPythonIncludeBasic)
 
 # Ask user
-print("Enter the absolute path to 'PSSO/Basic' folder:")
-pathBasic = input() # /home/tristan/Documents/Travail/TransfertGit/PSSO/Basic
+#print("Enter the absolute path to 'PSSO/Basic' folder:")
+ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])
+pathBasic = os.path.join(ABS_PATH,"Basic")
 
 # Set absolute paths using tags
 for path in filesDetectedPythonIncludeBasic:
