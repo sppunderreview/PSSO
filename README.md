@@ -10,11 +10,11 @@ This artifact requires a storage capacity of 130 GB and a computer with a Debian
 
 Disassembling binaries, which is optional, requires IDA Pro with a version close to 7.5.
 
-For additional details, please consult `REQUIREMENTS.md`.
+For additional details, please consult [REQUIREMENTS.md](REQUIREMENTS.md).
 
 ## Installation
 
-In order to clone this repository, you will need git-lfs first, please refer to `INSTALL.md`.
+In order to clone this repository, you will need git-lfs first, please refer to [INSTALL.md](INSTALL.md).
 
 ## Example of Use
 
@@ -24,16 +24,15 @@ In order to clone this repository, you will need git-lfs first, please refer to 
 The above will produce Tables of the Camera Ready version of our article using precomputed results.
 
 ## Usage - Basic
-For Basic dataset computation, ensure you have run SetAbsolutePath.py.
+For Basic dataset computation, ensure you have run `python3 SetAbsolutePath.py`.
 
 Inside a method folder:
 - `RunMakeMD3.py` will compute all similarity indices using precomputed features.
 - `RunMakeMD.py` will utilize these indices to compute the test field results.
 
-To reproduce the feature extraction, a script usually called "Preprocess.py" can be runned.
+To reproduce the feature extraction, a script usually called `Preprocess.py` can be runned.
 
 Some frameworks have a more complex workflow. For instance, a function embedding requires a learning phase, embedding computations, and distance computations (`gDist` folders), only after should similarity indices be computed.
-
 
 ## Usage - BinKit 
 The `BinKit/` directory has two subdirectories, namely, `Obfus`, which deals with obfuscated programs, and `Normal`. 
@@ -70,8 +69,9 @@ The artifact features four datasets:
 
 ## Corrections
 We have corrected two measurements in the Camera Ready version of our article:
-- We had to multiply the preprocessing time of PSS, PSSO and ASCG by 3 on the Basic dataset (see `Basic/Redaction/Speed/README.md` for more details).
-- We had to correct the preprocessing time of PSS and ASCG on 63 large programs on the Windows dataset (see `Windows/Redaction/README.md` for more details).
+- We had to multiply the preprocessing time of PSS, PSSO and ASCG by 3 on the Basic dataset (see [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details).
+- We had to correct the preprocessing time of PSS and ASCG on 63 large programs on the Windows dataset (see [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details).
+
 
 
 ## Abstract
