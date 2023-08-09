@@ -19,6 +19,8 @@ from safetorch.safe_network import SAFE
 from safetorch.parameters import Config
 import torch
 
+from tqdm import tqdm
+
 
 # initialize SAFE
 config = Config()
@@ -44,7 +46,7 @@ O0,O1 = benchmarkUO("O0","O1")
 O2,O3 = benchmarkUO("O2","O3")
 All = O0+O1+O2+O3
 
-for (idS, path, compilerOption, name, pathJson) in All:
+for (idS, path, compilerOption, name, pathJson) in tqdm(All):
     with open(pathJson) as f:
         data = json.load(f)
       
