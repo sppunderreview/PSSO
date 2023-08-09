@@ -1,1 +1,0 @@
-conda create --name PSS_Gencoding --file requirements_PSS_Gencoding.txt
