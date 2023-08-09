@@ -9,7 +9,7 @@
 ## Justifications:
 
 **Available:**  
-Our artifact is hosted in a public Github repository.
+Our artifact is hosted in a public GitHub repository.
 
 **Evaluated - Functional:**  
 The artifact is thoroughly documented and maintains a consistent layout. It's equipped to generate the LaTeX tables found within the Camera Ready version of the paper and is capable of replicating every part of our work. Three well-defined conda environments make the artifact easily exercisable.
