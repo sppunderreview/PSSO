@@ -56,7 +56,7 @@ pip3 install tqdm
 ```
 
 ### Gencoding Environment (PSS_Gencoding)
-An optional environment to run Gencoding which disassemble programs and ouputs Gemini network inputs.
+An optional environment to run Gencoding which disassembles programs and outputs Gemini network inputs.
 ```shell
 conda create --name PSS_Gencoding --file requirements_PSS_Gencoding.txt
 ```
