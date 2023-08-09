@@ -1,4 +1,4 @@
-# STATUS File
+# STATUS
 
 ## Applying For Badges:
 
