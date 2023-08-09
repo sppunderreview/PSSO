@@ -10,7 +10,7 @@ This artifact requires a storage capacity of 130 GB and a computer with a Debian
 
 Disassembling binaries, which is optional, requires IDA Pro with a version close to 7.5.
 
-For additional details, please consult[REQUIREMENTS.md](REQUIREMENTS.md).
+For additional details, please consult [REQUIREMENTS.md](REQUIREMENTS.md).
 
 ## Installation
 
