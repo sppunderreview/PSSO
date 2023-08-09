@@ -48,7 +48,7 @@ Each subdirectory contains three significant scripts:
 The `Redaction` subdirectory within `BinKit/` holds scripts that compute tables based on results obtained within each subdataset.
 
 ## Usage - IoT and Windows
-Both `IoT/` and `Windows/` datasets contain a `DataGeneration/` subdirectory with disassembly scripts and scripts for each method to extract features and embeddings from samples. 
+Both `IoT/` and `Windows/` folders contain a `DataGeneration/` subdirectory with disassembly scripts and scripts for each method to extract features and embeddings from samples. 
 Additionally, each dataset has a `DataLabelling/` subdirectory which contains scripts for labeling data. 
 
 Experiment folders such as  `XP/`  include `Run.py` scripts for conducting clone searches using precomputed embeddings. 
