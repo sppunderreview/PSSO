@@ -6,7 +6,7 @@ It is easily extensible and can be tweaked to carry out new measurements.
 
 ## Requirements
 
-This artifact requires a storage capacity of 130 GB and a computer with a Debian system.
+This artifact requires a storage capacity of 130 GB and a computer with a Debian system and conda package management installed.
 
 Disassembling binaries, which is optional, requires IDA Pro with a version close to 7.5.
 
