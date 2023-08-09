@@ -1,8 +1,8 @@
 # Artifact - Scalable Program Clone Search Through Spectral Analyss
 
-The artifact houses a purposely-built framework for clone search method comparison.
+The artifact is a purposely-built framework for clone search method comparison.
 
-The framework is easily extensible and can be tweaked to carry out new measurements.
+It is easily extensible and can be tweaked to carry out new measurements.
 
 ## Requirements
 
