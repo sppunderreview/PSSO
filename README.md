@@ -1,5 +1,79 @@
 # Artifact - Scalable Program Clone Search Through Spectral Analyss
 
+The artifact houses a purposely-built framework for clone search method comparison.
+
+The framework is easily extensible and can be tweaked to carry out new measurements.
+
+## Requirements
+
+This artifact requires a storage capacity of 130 GB and a computer with a Debian system.
+
+Disassembling binaries, which is optional, requires IDA Pro with a version close to 7.5.
+
+For additional details, please consult `REQUIREMENTS.md`.
+
+## Installation
+
+In order to clone this repository, you will need git-lfs first, please refer to `INSTALL.md`.
+
+## Example of Use
+
+1. Activate the environment with `conda activate PSS_Base`
+2. Run `python3 MakeTables.py` 
+
+The above will produce Tables of the Camera Ready version of our article using precomputed results.
+
+## Usage - Basic
+For Basic dataset computation, ensure you have run SetAbsolutePath.py.
+
+Inside a method folder:
+- `RunMakeMD3.py` will compute all similarity indices using precomputed features.
+- `RunMakeMD.py` will utilize these indices to compute the test field results.
+
+To reproduce the feature extraction, a script usually called "Preprocess.py" can be runned.
+
+Some frameworks have a more complex workflow. For instance, a function embedding requires a learning phase, embedding computations, and distance computations (`gDist` folders), only after should similarity indices be computed.
+
+
+## Usage - BinKit 
+The `BinKit/` directory has two subdirectories, namely, `Obfus`, which deals with obfuscated programs, and `Normal`. 
+Each subdirectory entails a `DataGeneration` folder which holds the disassembly scripts, and a unique folder for each method.
+These method folders have scripts to extract features and embeds from samples.
+
+Each subdirectory contains three significant scripts:
+1. `Run.py`: This script reproduces clone searches using precomputed embeddings in folders like `NORMAL_EMBEDS_2`.
+2. `Read.py`: It convert the results into a readable output.
+3. `ReadElapsed.py`: It converts the results into a dictionary storing running times.
+
+The `Redaction` subdirectory within `BinKit/` holds scripts that compute tables based on results obtained within each subdataset.
+
+## Usage - IoT and Windows
+Both `IoT/` and `Windows/` datasets contain a `DataGeneration/` subdirectory with disassembly scripts and scripts for each method to extract features and embeddings from samples. 
+Additionally, each dataset has a `DataLabelling/` subdirectory which contains scripts for labeling data. 
+
+Experiment folders such as  `XP/`  include `Run.py` scripts for conducting clone searches using precomputed embeddings. 
+Lastly, the `Redaction` subdirectory in each dataset includes scripts for computing tables from the results of experiment folders.
+
+
+## Content Overview
+
+### Software 
+
+The artifact includes implementations of 21 distinct clone search methods, comprising 6 new methods and 15 methods adapted or reimplemented from preceding works in the field.
+
+### Data Repositories 
+
+The artifact features four datasets:
+- The `Basic/` folder holds comprehensive data of a thousand programs. It includes source code, disassembly files, and features.
+- The `IoT/` folder holds twenty thousand malware taken from  [MalwareBazaar](https://bazaar.abuse.ch/), plus scripts for selecting, downloading, and labelling the data, along with all disassembly files and features.
+- Due to size constraints and copyright issues respectively, complete disassembly files and software aren't included inside `BinKit/` and `Windows/` folders. However, setup for disassembly and feature extraction reproduction is included. The BinKit dataset is readily accessible [here](https://github.com/SoftSec-KAIST/BinKit).
+
+## Corrections
+We have corrected two measurements in the Camera Ready version of our article:
+- We had to multiply the preprocessing time of PSS, PSSO and ASCG by 3 on the Basic dataset (see `Basic/Redaction/Speed/README.md` for more details).
+- We had to correct the preprocessing time of PSS and ASCG on 63 large programs on the Windows dataset (see `Windows/Redaction/README.md` for more details).
+
+
 ## Abstract
 We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection.
 
@@ -11,37 +85,8 @@ PSS reaches a sweet spot in terms of precision, speed and robustness. Especially
 
 ![Architecture of a Program Clone Search Procedure](./ArchitectureProgramCloneSearchProcedure.png "Architecture of a Program Clone Search Procedure")
 
-## Download
-In order to clone this repository, one needs git-lfs.
-1. Install git-lfs https://www.atlassian.com/git/tutorials/git-lfs#installing-git-lfs
-2. Type "git lfs clone git@github.com:sppunderreview/psso.git"
-
-## Usage
-One can produce Basic dataset LaTeX tables inside the "Results/" folder, using precomputed results disseminated into each framework folder.
-
-### Basic dataset computation
-Paths have to be corrected:
-1. Inside benchmark core scripts such as "Basic/GCoreutilsOptions/makeBenchCO.py".
-2. Inside scripts for frameworks, such as "MutantX-S/" folder.
-
-Inside a framework folder:
-* 'RunMakeMD3.py' computes all similarity indices.
-* 'RunMakeMD.py'  use indices to compute test fields result.
-
-### Some frameworks have a complex workflow
-For instance, a function embedding requires a learning phase, embedding generation, and distance computation.
-
-Only then should MDs be computed.
-
-## Miscellaneous
-- BinKit, IoT, and Windows datasets are not included. However, each program's embedding, and complete results are included.
-- Disassembling requires IDA Pro under a Linux system.
-- The Asm2vecJava folder contains the Java source code for Asm2Vec, while Asm2Vec contains results.
-- Gencoding produces Gemini inputs from raw programs.
-
 ## Acknowledgments
+
 This work is supported by (i) a public grant overseen by the French National Research Agency (ANR) as part of the "Investissements d'Avenir" French PIA project "Lorraine Université d'Excellence", reference ANR-15-IDEX-04-LUE, and (ii) has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 830927 (Concordia).
 
 Experiments presented in this paper were carried out using the Grid'5000 experimental testbed, being developed under the INRIA ALADDIN development action with support from CNRS, RENATER and several Universities as well as other funding bodies (see https://www.grid5000.fr).
-
-###
