@@ -1,4 +1,4 @@
-# Artifact - Scalable Program Clone Search Through Spectral Analyss
+# Artifact - Scalable Program Clone Search Through Spectral Analysis
 
 The artifact is a purposely-built framework for clone search method comparison.
 
@@ -30,9 +30,9 @@ Inside a method folder:
 - `RunMakeMD3.py` will compute all similarity indices using precomputed features.
 - `RunMakeMD.py` will utilize these indices to compute the test field results.
 
-To reproduce the feature extraction, a script usually called `Preprocess.py` can be runned.
+To reproduce the feature extraction, usually a script called `Preprocess.py` can be run.
 
-Some frameworks have a more complex workflow. For instance, a function embedding requires a learning phase, embedding computations, and distance computations (`gDist` folders), only after should similarity indices be computed.
+Some frameworks have a more complex feature extraction workflow. For instance, a function embedding requires a learning phase and an embedding generation phase. Only after distance computations (`gDist` folders) are done can similarity indices be computed from these computations.
 
 ## Usage - BinKit 
 The `BinKit` directory has two subdirectories, namely, `Obfus`, which deals with obfuscated programs, and `Normal`. 
@@ -41,14 +41,14 @@ These method folders have scripts to extract features and embeds from samples.
 
 Each subdirectory contains three significant scripts:
 1. `Run.py`: This script reproduces clone searches using precomputed embeddings in folders like `NORMAL_EMBEDS_2`.
-2. `Read.py`: It convert the results into a readable output.
+2. `Read.py`: It converts the results into a readable output.
 3. `ReadElapsed.py`: It converts the results into a dictionary storing running times.
 
 The `Redaction` subdirectory within `BinKit` holds scripts that compute tables based on results obtained within each subdataset.
 
 ## Usage - IoT and Windows
 Both `IoT` and `Windows` folders contain a `DataGeneration` subdirectory with disassembly scripts and scripts for each method to extract features and embeddings from samples. 
-Additionally, each dataset has a `DataLabelling` subdirectory which contains scripts for labeling data. 
+Additionally, each dataset has a `DataLabelling` subdirectory, which contains scripts for labeling data. 
 
 Experiment folders such as  `XP`  include `Run.py` scripts for conducting clone searches using precomputed embeddings. 
 Lastly, the `Redaction` subdirectory in each dataset includes scripts for computing tables from the results of experiment folders.
@@ -63,8 +63,8 @@ The artifact includes implementations of 21 distinct clone search methods, compr
 ### Data Repositories 
 
 The artifact features four datasets:
-- The `Basic` folder holds comprehensive data of a thousand programs. It includes source code, disassembly files, and features.
-- The `IoT` folder holds twenty thousand malware taken from  [MalwareBazaar](https://bazaar.abuse.ch/), plus scripts for selecting, downloading, and labelling the data, along with all disassembly files and features.
+- The `Basic` folder holds comprehensive data about a thousand programs. It includes source code and disassembly files.
+- The `IoT` folder holds twenty thousand malware taken from  [MalwareBazaar](https://bazaar.abuse.ch/), plus scripts for selecting, downloading, and labeling the data, along with all disassembly files and features.
 - Due to size constraints and copyright issues respectively, complete disassembly files and software aren't included inside `BinKit` and `Windows` folders. However, setup for disassembly and feature extraction reproduction is included. The BinKit dataset is readily accessible [here](https://github.com/SoftSec-KAIST/BinKit).
 
 ## Corrections
