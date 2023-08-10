@@ -21,7 +21,7 @@ If you have trouble installing git-lfs see the instructions [on the git-lfs repo
 2. Clone the repository using Git Large File Storage (LFS):
 
    ```shell
-   git lfs clone git@github.com:sppunderreview/psso.git
+   git lfs clone https://github.com/sppunderreview/PSSO.git
    cd PSSO/
    python3 SetAbsolutePath.py
    ```
