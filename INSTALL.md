@@ -2,13 +2,15 @@
 
 Follow the steps below to install and set up the artifact:
 
+## 0. Install Conda
+If you don't have Conda, you can install it by following the instructions [on the Conda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html).
+
 ## 1. Install Software Packages
 ```shell
 sudo apt install git
 sudo apt install git-lfs
 sudo apt install binutils
 sudo apt install zip
-sudo apt install eclipse
 ```
 
 ## 2. Download the Repository
@@ -74,3 +76,10 @@ python3 computesEmbeddings.py
 The output of the above command should display a `tqdm` progress bar ranging from 0 to 88.
 This command will compute SAFE function embeddings for the dataset "UtilsOptions" of "Basic" using the SAFE precomputed model.
 It should output files inside `SAFE/makeEmbeds/UO` folder.
+
+## Software for Asm2Vec
+To reproduce Asm2Vec experiments, you will need Eclipse IDE with JDK 11.
+
+You can install it by following the instructions [on the Eclipse website]( https://eclipseide.org/).
+
+
