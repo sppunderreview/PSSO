@@ -8,6 +8,7 @@ If you don't have Conda, you can install it by following the instructions [on th
 ## 1. Install Software Packages
 ```shell
 sudo apt install git
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
 sudo apt install git-lfs
 sudo apt install binutils
 sudo apt install zip
