@@ -21,7 +21,7 @@ In order to clone this repository, you will need git-lfs first, please refer to 
 1. Activate the environment with `conda activate PSS_Base`
 2. Run `python3 MakeTables.py` 
 
-The above will produce Tables of the Camera Ready version of our article using precomputed results.
+The above will produce in a few minutes the Tables of the Camera Ready version of our article using precomputed results.
 
 ## Usage - Basic
 For Basic dataset computation, ensure you have run `python3 SetAbsolutePath.py`.
