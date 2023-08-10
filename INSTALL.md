@@ -11,6 +11,7 @@ sudo apt install git
 sudo apt install git-lfs
 sudo apt install binutils
 sudo apt install zip
+sudo apt install p7zip
 ```
 
 If you have trouble installing git-lfs see the instructions [on the git-lfs repository](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md).
