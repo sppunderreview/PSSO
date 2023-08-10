@@ -13,7 +13,7 @@ sudo apt install binutils
 sudo apt install zip
 ```
 
-If you have troubles installing git-lfs see the instructions [on the git-lfs repository](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md).
+If you have trouble installing git-lfs see the instructions [on the git-lfs repository](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md).
 
 ## 2. Download the Repository
 
