@@ -36,10 +36,12 @@ def preprocessCFG(CFG):
     CFG = -np.sort(-CFG)
     return CFG/np.linalg.norm(CFG)
 
-def computeEmbedding(inputs):    
+def computeEmbedding(inputs):
+    print("Reading .json")
     elapsedP, programs, graphP,  programsSpectrum = loadGraphs(inputs)
     pV = {}
-    for p in programs:
+    for (idS,path,compilerOption,name, pathJson) in inputs:
+        p = str(idS)
         start = time.time()
 
         # Spectrum of undirected graph
@@ -50,7 +52,7 @@ def computeEmbedding(inputs):
         edgesCFG = preprocessCFG(np.array(programsSpectrum[p]))
 
         elapsed = time.time()-start + elapsedP[p]
-        print(elapsed,p, len(spectrum), len(edgesCFG))
+        print("Program", name, "with", compilerOption, ", # of local CFG:", len(edgesCFG), ", time:", elapsed, "s")
         pV[p] =  [spectrum, edgesCFG, elapsed]
     return pV
     
