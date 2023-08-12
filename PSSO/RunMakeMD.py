@@ -1,5 +1,5 @@
-from multiprocessing import Process
 import pickle
+from tqdm import tqdm
 
 def minRun(O, folder, nameXP):
     inputFile  = folder+nameXP[0:2]+"_MD"
@@ -16,15 +16,15 @@ def minRun(O, folder, nameXP):
     MD["<-"] = {}
     MD["<>"] = {}
 
-
-    for (idS,path,compilerOption, name, pathJson) in O0:
+    print("Testfield", O0[0][2], "->", O1[0][2])
+    for (idS,path,compilerOption, name, pathJson) in tqdm(O0):
         MD["->"][idS] = {}
-        for (idS2,path2,compilerOption2,name2, pathJson2) in O1:
+        for (idS2,path2,compilerOption2,name2, pathJson2) in  O1:
             d = MD3[idS][idS2][-2]
             MD["->"][idS][idS2] = (name,name2,compilerOption,compilerOption2,d)
             
-
-    for (idS,path,compilerOption,name, pathJson) in O1:
+    print("Testfield", O0[0][2], "<-", O1[0][2])
+    for (idS,path,compilerOption,name, pathJson) in tqdm(O1):
         MD["<-"][idS] = {}        
         for (idS2,path2,compilerOption2,name2, pathJson2) in O0:
             d = MD3[idS][idS2][-2]
@@ -32,7 +32,8 @@ def minRun(O, folder, nameXP):
 
     OAll = O0 + O1
 
-    for (idS,path,compilerOption,name, pathJson) in OAll:
+    print("Testfield", O0[0][2], "<->", O1[0][2])
+    for (idS,path,compilerOption,name, pathJson) in tqdm(OAll):
         MD["<>"][idS] = {}        
         for (idS2,path2,compilerOption2,name2, pathJson2) in OAll:
             if idS == idS2:
@@ -44,6 +45,7 @@ def minRun(O, folder, nameXP):
         pickle.dump(MD, f)
 
 def run(O, nameXP):
+    print("Basic Subdataset", nameXP[0:2])
     minRun(O, "./", nameXP)
     #minRun(O, "../spectralA/",  nameXP)
     #minRun(O, "../spectralB/",  nameXP)
@@ -81,83 +83,27 @@ if __name__ == '__main__':
     P17D = benchmarkCV("V1","V3")
     P18D = benchmarkCV("V2","V3")
 
-    p1 = Process(target=run, args=(P1D,"BO0O1"))
-    p1.start()
-
-    p2 = Process(target=run, args=(P2D,"BO0O2"))
-    p2.start()
-
-    p3 = Process(target=run, args=(P3D,"BO0O3"))
-    p3.start()
-
-    p4 = Process(target=run, args=(P4D,"BO1O2"))
-    p4.start()
-
-    p1.join()
-    p2.join()
-    p3.join()
-    p4.join()
+    run(P1D,"BO0O1")
+    run(P2D,"BO0O2")
+    run(P3D,"BO0O3")
+    run(P4D,"BO1O2")    
+    run(P5D,"BO1O3")
+    run(P6D,"BO2O3")
     
-    p5 = Process(target=run, args=(P5D,"BO1O3"))
-    p5.start()
-
-    p6 = Process(target=run, args=(P6D,"BO2O3"))
-    p6.start()
-
-    p7 = Process(target=run, args=(P7D,"BV0V1"))
-    p7.start()
-
-    p8 = Process(target=run, args=(P8D,"BV0V2"))
-    p8.start()
-
-    p5.join()
-    p6.join()
-    p7.join()
-    p8.join()
+    run(P7D,"BV0V1")
+    run(P8D,"BV0V2")
+    run(P9D,"BV0V3")
+    run(P10D,"BV1V2")
+    run(P11D,"BV1V3")
+    run(P12D,"BV2V3")
     
-    p9 = Process(target=run, args=(P9D,"BV0V3"))
-    p9.start()
-
-    p10 = Process(target=run, args=(P10D,"BV1V2"))
-    p10.start()
-
-    p11 = Process(target=run, args=(P11D,"BV1V3"))
-    p11.start()
-
-    p12 = Process(target=run, args=(P12D,"BV2V3"))
-    p12.start()
-
-    p9.join()
-    p10.join()
-    p11.join()
-    p12.join()
+    run(P13D,"CV0V1")
+    run(P14D,"CV0V2")
+    run(P15D,"CV0V3")
+    run(P16D,"CV1V2")
+    run(P17D,"CV1V3")
+    run(P18D,"CV2V3")
     
-    p13 = Process(target=run, args=(P13D,"CV0V1"))
-    p13.start()
-
-    p14 = Process(target=run, args=(P14D,"CV0V2"))
-    p14.start()
-
-    p15 = Process(target=run, args=(P15D,"CV0V3"))
-    p15.start()
-
-    p16 = Process(target=run, args=(P16D,"CV1V2"))
-    p16.start()
-
-    p13.join()
-    p14.join()
-    p15.join()
-    p16.join()
-    
-    p17 = Process(target=run, args=(P17D,"CV1V3"))
-    p17.start()
-
-    p18 = Process(target=run, args=(P18D,"CV2V3"))
-    p18.start()
-
-    p17.join()
-    p18.join()
-
     P1D = benchmarkCO("O0","O1")
     P2D = benchmarkCO("O0","O2")
     P3D = benchmarkCO("O0","O3")
@@ -165,32 +111,13 @@ if __name__ == '__main__':
     P5D = benchmarkCO("O1","O3")
     P6D = benchmarkCO("O2","O3")
 
-    p1 = Process(target=run, args=(P1D,"CO0O1"))
-    p1.start()
-
-    p2 = Process(target=run, args=(P2D,"CO0O2"))
-    p2.start()
-
-    p3 = Process(target=run, args=(P3D,"CO0O3"))
-    p3.start()
-
-    p4 = Process(target=run, args=(P4D,"CO1O2"))
-    p4.start()
-
-    p1.join()
-    p2.join()
-    p3.join()
-    p4.join()
+    run(P1D,"CO0O1")
+    run(P2D,"CO0O2")
+    run(P3D,"CO0O3")
+    run(P4D,"CO1O2") 
+    run(P5D,"CO1O3")
+    run(P6D,"CO2O3")
     
-    p5 = Process(target=run, args=(P5D,"CO1O3"))
-    p5.start()
-
-    p6 = Process(target=run, args=(P6D,"CO2O3"))
-    p6.start()
-
-    p5.join()
-    p6.join()
-
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
     sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
@@ -213,54 +140,17 @@ if __name__ == '__main__':
     P12D = benchmarkUV("V2","V3")
 
 
-    p1 = Process(target=run, args=(P1D,"UO0O1"))
-    p1.start()
-
-    p2 = Process(target=run, args=(P2D,"UO0O2"))
-    p2.start()
-
-    p3 = Process(target=run, args=(P3D,"UO0O3"))
-    p3.start()
-
-    p4 = Process(target=run, args=(P4D,"UO1O2"))
-    p4.start()
-
-    p1.join()
-    p2.join()
-    p3.join()
-    p4.join()
+    run(P1D,"UO0O1")
+    run(P2D,"UO0O2")
+    run(P3D,"UO0O3")
+    run(P4D,"UO1O2")    
+    run(P5D,"UO1O3")
+    run(P6D,"UO2O3")
     
-    p5 = Process(target=run, args=(P5D,"UO1O3"))
-    p5.start()
-
-    p6 = Process(target=run, args=(P6D,"UO2O3"))
-    p6.start()
-
-    p7 = Process(target=run, args=(P7D,"UV0V1"))
-    p7.start()
-
-    p8 = Process(target=run, args=(P8D,"UV0V2"))
-    p8.start()
-
-    p5.join()
-    p6.join()
-    p7.join()
-    p8.join()
-    
-    p9 = Process(target=run, args=(P9D,"UV0V3"))
-    p9.start()
-
-    p10 = Process(target=run, args=(P10D,"UV1V2"))
-    p10.start()
-
-    p11 = Process(target=run, args=(P11D,"UV1V3"))
-    p11.start()
-
-    p12 = Process(target=run, args=(P12D,"UV2V3"))
-    p12.start()
-
-    p9.join()
-    p10.join()
-    p11.join()
-    p12.join()
+    run(P7D,"UV0V1")
+    run(P8D,"UV0V2")
+    run(P9D,"UV0V3")
+    run(P10D,"UV1V2")
+    run(P11D,"UV1V3")
+    run(P12D,"UV2V3")
     

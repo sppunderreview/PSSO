@@ -4,12 +4,15 @@ from Prototype import distanceSP16, distanceA, distanceB
 import time
 import os
 import pickle
+from tqdm import tqdm
 
 def minRun(O, fTotal, outputFile,dist):
     MD = {}
     for (idS,path,compilerOption,name, pathJson) in O:
+        print("Computing similarity indices for Program", name, "with", compilerOption)
+
         MD[idS] = {}
-        for (idS2,path2,compilerOption2,name2, pathJson2) in O:
+        for (idS2,path2,compilerOption2,name2, pathJson2) in tqdm(O):
             if idS == idS2:
                 continue
             start = time.time()
@@ -20,6 +23,7 @@ def minRun(O, fTotal, outputFile,dist):
         pickle.dump(MD, f)
         
 def run(O, nameXP):
+    print("Basic Subdataset", nameXP)
     with open("A_"+nameXP, "rb") as f:
         fTotal = pickle.load(f)    
 
