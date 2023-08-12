@@ -45,7 +45,7 @@ def computeWeights(R, E):
 
 # SHARED EMBEDS DATA
 EMBEDS_DATA = {}
-for nEmb in  ["BSIZE","DSIZE","FUNCTIONSET","LIBDX","MUTANTX","PSS","PSSV16","SCG","SHAPE","STRINGS"]:
+for nEmb in  ["BSIZE","DSIZE","FUNCTIONSET","LIBDX","MUTANTX2","PSS","PSSV16","SCG","SHAPE","STRINGS"]:
     with open("EMBEDS/"+nEmb, "rb") as f:
         EMBEDS_DATA[nEmb] = pickle.load(f)
 
@@ -60,6 +60,8 @@ for idS in EMBEDS_DATA["SCG"]:
 # SHARED REPOSITORIES & GROUND TRUTHS
 with open("QBs", "rb") as f:
     QBs = pickle.load(f)
+with open("QBAs", "rb") as f:
+    QBs += pickle.load(f)
 
 with open("T", "rb") as f:
     idSToName = pickle.load(f)
@@ -287,7 +289,7 @@ if __name__ == '__main__':
     RUN_ID = 1
     LC  = [(distPSS, "PSS"),(distancePSS16, "PSSV16"),(distSHAPE, "SHAPE"),(distEuclid, "BSIZE"), (distEuclid, "DSIZE"),(distSCG, "SCG"),(distStrings, "STRINGS")]
     LC += [(distLibDX, "LIBDX")]
-    LC += [(distFS, "FUNCTIONSET"),(distEuclid, "MUTANTX")]
+    LC += [(distFS, "FUNCTIONSET"),(distEuclid, "MUTANTX2")]
 
     for QB in QBs:
         random.seed( RUN_ID )

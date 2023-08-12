@@ -76,5 +76,5 @@ if __name__ == '__main__':
 	random.seed( RUN_ID ) # Seed the repository choices
 	start = time.time()
 	minRun(0, 1, 0, distPSS, "PSSV16", RUN_ID)
-	print(RUN_ID, nEmb, time.time()-start, "s")
+	print(RUN_ID, "PSSO", time.time()-start, "s")
 
