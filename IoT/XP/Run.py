@@ -262,7 +262,13 @@ if __name__ == '__main__':
 
     for (distF, nEmb) in LC:
         with open("EMBEDS/"+nEmb, "rb") as f:
-            (E,T) = pickle.load(f)
+            X = pickle.load(f)
+        if len(X) == 2:
+            (E,T) = X
+        else:
+            E = X
+            with open("LABELS", "rb") as f:
+                T = pickle.load(f)
 
         if nEmb == "PSS_D_5535":
             E = preprocessPSS(E)
