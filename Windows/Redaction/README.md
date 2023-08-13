@@ -2,7 +2,7 @@
 ## Correction
 Initially, for PSS and ASCG preprocessing, 30 very large target programs out of a total of 49,443 were run with multiple processors. A coefficient was applied to recover a comparable runtime for query preprocessing. We have replaced this estimate with a computation with one processor. The initial estimation was too optimistic, and the larger and heavier programs are particularly slow on PSS, noticeably influencing the average.
 
-Prior to this correction, the mean preprocessing runtime was 13.42 seconds, and the median was 0.12563, with a minimum runtime of 0.00139 and a maximum runtime of 10,074 seconds. 
+Prior to this correction, PSS mean preprocessing runtime was 13.42 seconds, and the median was 0.12563, with a minimum runtime of 0.00139 and a maximum runtime of 10,074 seconds. 
  
 Following the correction, the median remained at 0.12563, with the minimum still at 0.00139. However, the maximum runtime increased to 19,988 seconds, and the mean was 16.95 seconds.
 
