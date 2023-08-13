@@ -95,7 +95,7 @@ These method folders have scripts to extract features and embeds from samples.
 Each subdirectory contains three significant scripts:
 1. `Run.py`: This script reproduces clone searches using precomputed features stored in folders like `NORMAL_EMBEDS_2`.
 2. `Read.py`: It converts the results into a readable output.
-3. `ReadElapsed.py`: It converts the results into a dictionary storing running times.
+3. `ReadElapsed.py`: It converts the results into a dictionary storing runtimes.
 
 The `Redaction` subdirectory within `BinKit` holds scripts that compute tables based on results obtained within each subdataset.
 
@@ -108,8 +108,8 @@ Lastly, the `Redaction` subdirectory in each dataset includes scripts for comput
 
 ## Corrections
 We have corrected two measurements in the Camera Ready version of our article:
-- We had to multiply the preprocessing time of PSS, PSSO and ASCG by 3 on the Basic dataset (see [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details).
-- We had to correct the preprocessing time of PSS and ASCG on 63 large programs on the Windows dataset (see [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details).
+- We had to multiply the preprocessing runtimes of PSS, PSSO and ASCG by 3 on the Basic dataset (see [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details).
+- We had to correct the preprocessing runtimes of PSS and ASCG on 30 large target programs over 49,443 on the Windows dataset (see [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details).
 
 ## Abstract
 We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection.
