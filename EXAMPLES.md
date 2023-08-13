@@ -188,6 +188,12 @@ You can quit the bash terminal to end the visualization script.
 
 ## StringSet on a hundred IoT Malware (5 minutes)
 
+Replicate the method StringSet on 157 IoT Malware samples.
+
+This example goes from the preprocessing that extracts string literals to the generation of tables.
+
+It includes clone searches and the selection of samples.
+
 ### Preprocessing
 **Command:**
 ```bash
@@ -249,6 +255,10 @@ StringSet                0.01s     0.682                     2s
 
 ## PSSO on a Small Part of the Windows Dataset (7 minutes)
 
+Replicate PSSO clone searches on a small part of the Windows dataset.
+
+This example does not include the preprocessing phase, as the data is not available due to copyright issues.
+
 ### Clone Searches
 **Command:**
 ```bash
@@ -277,6 +287,13 @@ PSSO        1.56s (0.39s)     0.430          5h27m (5h23m)
 ```
 
 ## MutantX-S on the Clang v7/v4 Testfield of the BinKit Dataset (20 minutes)
+
+Replicate MutantX-S clone searches on one cross-compiler testfield.
+
+This example does not include the preprocessing phase, because the samples and disassembly files were too big to be included directly.
+
+However, if you download BinKit samples, you can disassemble them using the script inside .
+
 
 ### Clone Searches
 **Command:**
