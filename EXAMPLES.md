@@ -292,7 +292,7 @@ Replicate MutantX-S clone searches on one cross-compiler testfield.
 
 This example does not include the preprocessing phase, because the samples and disassembly files were too big to be included directly.
 
-However, if you download BinKit samples [here](https://github.com/SoftSec-KAIST/BinKit) and place them into `BinKit/Normal/DataGeneration/samples/`, you can disassemble them using scripts inside `BinKit/Normal/DataGeneration` and perform MutantX-S preprocessing with `BinKit/Normal/DataGeneration/MUTANTX/Preprocess.py`.
+However, if you download BinKit samples [here](https://github.com/SoftSec-KAIST/BinKit) and place them into `BinKit/Normal/DataGeneration/samples/`, you can disassemble them using scripts inside `BinKit/Normal/DataGeneration` and perform MutantX-S preprocessing with `BinKit/Normal/DataGeneration/MUTANTX/Preprocess.py`. Be warned, this would take days.
 
 
 ### Clone Searches
