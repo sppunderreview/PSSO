@@ -19,5 +19,7 @@ def computeEmbedding(inputs):
             stringMultiSet[t] += 1             
         elapsed = time.time() - start
         embeds[str(idS)] =  stringMultiSet # [stringMultiSet, time.time() - start]
+        print("IoT malware hash:", idS)
+        print("String literals:", [x for x in stringMultiSet])
     return embeds
     
