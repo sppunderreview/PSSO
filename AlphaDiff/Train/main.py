@@ -58,7 +58,7 @@ def main():
     parser.add_argument('--batch-size', type=int, default=100, metavar='N',
                         help='input batch size for training (default: 100)')
     parser.add_argument('--epochs', type=int, default=10, metavar='N',
-                        help='number of epochs to train (default: 10)')
+                        help='number of epochs to train (default: 20)')
     parser.add_argument('--no-cuda', action='store_true', default=False,
                         help='disables CUDA training')
     #parser.add_argument('--seed', type=int, default=1, metavar='S',
@@ -88,7 +88,7 @@ def main():
     trainable_params =  sum(p.numel() for p in model.parameters() if p.requires_grad)    
     print("# Trainable", trainable_params)
     
-    for epoch in range(1 + 12, args.epochs + 1 + 12):
+    for epoch in range(1, args.epochs + 1):
         train(args, model, device, data_loader, optimizer, epoch)
         model = model.to("cpu")
         if args.save_model:

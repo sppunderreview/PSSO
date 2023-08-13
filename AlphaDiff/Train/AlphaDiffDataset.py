@@ -11,7 +11,7 @@ class AlphaDiffDataset(Dataset):
         return 625318
 
     def open_hdf5(self):
-        self.hf = h5py.File('/tmp/datasetAD.h5', 'r')
+        self.hf = h5py.File('datasetAD.h5', 'r')
 
     def __del__(self):
         if hasattr(self, 'hf'):
