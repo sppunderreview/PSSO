@@ -1,7 +1,11 @@
 # Examples
 
 ## PSSO on the Basic Dataset (8 minutes)
+Replicate our method Program Spectral Similarity Optimized (PSSO) on the Basic dataset.
 
+This process will encompass everything from preprocessing to the generation of tables, including the computation of similarity indices.
+
+### Preprocessing
 **Command:**
 ```bash
 conda activate PSS_Base
@@ -32,6 +36,7 @@ Program diff with O0 , # of local CFG: 365 , time: 0.0939018726348877 s
 ...
 ```
 
+### Similarity Indices Computation
 **Command:**
 ```bash
 python3 RunMakeMD3.py
@@ -60,6 +65,7 @@ Computing similarity indices for Program cp with O0
 ...
 ```
 
+### Clone Searches on all Testfields
 **Command:**
 ```bash
 python3 RunMakeMD.py 
@@ -89,7 +95,7 @@ Testfield O0 <-> O3
 100%|███████████████████| 42/42 [00:00<00:00, 38521.93it/s]
 ...
 ```
-
+### Tables Generation
 **Command:**
 ```bash
 cd ../
@@ -141,8 +147,14 @@ All Tables generated in 101.98 s
 ```
 
 
-## SAFE function embedding on the Coreutils Versions subdataset (8 minutes)
+## SAFE Function Embedding on the Coreutils Versions Subdataset (8 minutes)
+Demonstrate the use of SAFE Function Embedding.
 
+Due to the time-intense process of SAFE clone searches (655 hours),  only part of SAFE preprocessing is shown in this example.
+
+It replicates SAFE on the subdataset Coreutils Versions of the Basic dataset and allows the user to visualize function embeddings.
+
+### Function Embeddings Computation
 **Command:**
 ```bash
 conda activate PSS_Base
@@ -156,6 +168,7 @@ Computing Coreutils Versions functions embeddings for each program! (5 minutes)
  100%|████████████████████| 348/348 [04:15<00:00,  1.36it/s]
 ```
 
+### Function Embeddings Visualization
 **Command:**
 ```bash
 python3 readEmbeddings.py
@@ -173,8 +186,9 @@ Inside 348 programs of Coreutils Versions
 
 You can quit the bash terminal to end the visualization script.
 
-## StringSet on a hundred IoT malwares (5 minutes)
+## StringSet on a hundred IoT Malware (5 minutes)
 
+### Preprocessing
 **Command:**
 ```bash
 conda activate PSS_Base
@@ -191,6 +205,7 @@ String literals: ['TUPX!$', '3:?`3', ... ,  '$Info: This file is packed with the
 
 ```
 
+### Selection of IoT Malware Samples
 **Command:**
 ```bash
 mv STRINGS ../RESTRICT_EMBEDS/complete
@@ -203,6 +218,7 @@ Size before restriction STRINGS 200
 Size after restriction STRINGS 157
 ```
 
+### Clone Searches
 **Command:**
 ```bash
 mv final/STRINGS ../../XP/
@@ -219,6 +235,7 @@ Starting Clone Searches
 StringSet 1.7849047183990479 s
 ```
 
+### Table Generation
 **Command:**
 ```bash
 cd ../Redaction/
@@ -230,8 +247,9 @@ python3 IoT_Small.py
 StringSet                0.01s     0.682                     2s
 ```
 
-## PSSO on a small part of the Windows dataset (7 minutes)
+## PSSO on a Small Part of the Windows Dataset (7 minutes)
 
+### Clone Searches
 **Command:**
 ```bash
 conda activate PSS_Base
@@ -246,6 +264,7 @@ python3 RunSmallPSSO.py
 6 PSSO 234.02400159835815 s
 ```
 
+### Table Generation
 **Command:**
 ```bash
 cd ../Redaction/
@@ -257,8 +276,9 @@ python3 Windows_Small.py
 PSSO        1.56s (0.39s)     0.430          5h27m (5h23m)
 ```
 
-## MutantX-S  on the clang v7/v4 testfield of the BinKit dataset (20 minutes)
+## MutantX-S on the Clang v7/v4 Testfield of the BinKit Dataset (20 minutes)
 
+### Clone Searches
 **Command:**
 ```bash
 conda activate PSS_Base
@@ -277,6 +297,7 @@ clang-7.0/clang-4.0 7520 7520
 clang-7.0/clang-4.0 1 MUTANTX2 1003.184271812439 s
 ```
 
+### Table Generation
 **Command:**
 ```bash
 python3 ReadSmall.py
