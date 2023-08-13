@@ -9,7 +9,7 @@
  * To Public License, Version 2, as published by Sam Hocevar. See
  * http://sam.zoy.org/wtfpl/COPYING for more details.
  */
-
+// Modified by Tristan Benoit to perform SMIT GED computation
 
 #include <sys/types.h>
 #include <stddef.h>
