@@ -12,7 +12,24 @@ python3 Preprocess.py
 
 **Output:**
 ```console
-Program lua with O2, # of local CFG: 817, time: 0.15022063255310059 s
+Reading .json
+Program codeblocks with O1 , # of local CFG: 3642 , time: 1.3974053859710693 s
+Program ssh with O2 , # of local CFG: 1622 , time: 0.5432868003845215 s
+Program perl with O1 , # of local CFG: 2225 , time: 1.4496872425079346 s
+Program openssl with O1 , # of local CFG: 3464 , time: 0.674699068069458 s
+Program libgeany.so.0.0.0 with O2 , # of local CFG: 7653 , time: 2.8476717472076416 s
+Program libgeany.so.0.0.0 with O1 , # of local CFG: 7209 , time: 2.7797937393188477 s
+Program codeblocks with O0 , # of local CFG: 4430 , time: 1.8078033924102783 s
+Program sort with O0 , # of local CFG: 368 , time: 0.1629476547241211 s
+Program cp with O0 , # of local CFG: 391 , time: 0.09430146217346191 s
+Program git with O0 , # of local CFG: 4065 , time: 1.414459228515625 s
+Program openssl with O3 , # of local CFG: 3496 , time: 0.7026350498199463 s
+Program ssh with O1 , # of local CFG: 1589 , time: 0.5069830417633057 s
+Program libgeany.so.0.0.0 with O0 , # of local CFG: 14624 , time: 4.75564432144165 s
+Program ruby with O1 , # of local CFG: 5700 , time: 2.687840461730957 s
+Program cmp with O0 , # of local CFG: 149 , time: 0.1868577003479004 s
+Program diff with O0 , # of local CFG: 365 , time: 0.0939018726348877 s
+...
 ```
 
 **Command:**
@@ -22,8 +39,25 @@ python3 RunMakeMD3.py
 **Output:**
 ```console
 Basic Subdataset BO
-Computing similarity indices for Program lua with O2
-tqdm bar
+Computing similarity indices for Program codeblocks with O1
+100%|| 84/84 [00:00<00:00, 11437.53it/s]
+Computing similarity indices for Program ssh with O2
+100%|███████████████████| 84/84 [00:00<00:00, 16027.00it/s]
+Computing similarity indices for Program perl with O1
+100%|███████████████████| 84/84 [00:00<00:00, 26028.48it/s]
+Computing similarity indices for Program openssl with O1
+100%|███████████████████| 84/84 [00:00<00:00, 32367.62it/s]
+Computing similarity indices for Program libgeany.so.0.0.0 with O2
+100%|████████████████████| 84/84 [00:00<00:00, 3396.85it/s]
+Computing similarity indices for Program libgeany.so.0.0.0 with O1
+100%|███████████████████| 84/84 [00:00<00:00, 39034.07it/s]
+Computing similarity indices for Program codeblocks with O0
+100%|███████████████████| 84/84 [00:00<00:00, 39864.40it/s]
+Computing similarity indices for Program sort with O0
+100%|███████████████████| 84/84 [00:00<00:00, 46382.51it/s]
+Computing similarity indices for Program cp with O0
+100%|███████████████████| 84/84 [00:00<00:00, 44727.88it/s]
+...
 ```
 
 **Command:**
@@ -32,13 +66,28 @@ python3 RunMakeMD.py
 ```
 **Output:**
 ```console
-Basic Subdataset UV 
-Testfield V2 -> V3
-tqdm bar
-Testfield V2 <- V3
-tqdm bar
-Testfield V2 <-> V3
-tqdm bar
+Basic Subdataset BO
+Testfield O0 -> O1
+100%|███████████████████| 21/21 [00:00<00:00, 44984.87it/s]
+Testfield O0 <- O1
+100%|| 21/21 [00:00<00:00, 125649.62it/s]
+Testfield O0 <-> O1
+100%|███████████████████| 42/42 [00:00<00:00, 65341.53it/s]
+Basic Subdataset BO
+Testfield O0 -> O2
+100%|███████████████████| 21/21 [00:00<00:00, 144869.05it/s]
+Testfield O0 <- O2
+100%|███████████████████| 21/21 [00:00<00:00, 144631.17it/s]
+Testfield O0 <-> O2
+100%|███████████████████| 42/42 [00:00<00:00, 66076.81it/s]
+Basic Subdataset BO
+Testfield O0 -> O3
+100%|███████████████████| 21/21 [00:00<00:00, 142294.64it/s]
+Testfield O0 <- O3
+100%|███████████████████| 21/21 [00:00<00:00, 90153.92it/s]
+Testfield O0 <-> O3
+100%|███████████████████| 42/42 [00:00<00:00, 38521.93it/s]
+...
 ```
 
 **Command:**
@@ -49,7 +98,46 @@ python3 MakeTables.py
 
 **Output:**
 ```console
+Loading the Preliminary Evaluation Table ...
+Table (Preliminary Evaluation) Total runtimes on the Basic dataset
+               Total
 ...
+PSSO          14m28s
+...
+
+Loading RQ1 Tables ...
+Table (RQ1) Total runtimes.
+Include preprocessing time.
+Significant preprocessing times reported in "( )".
+                       Basic   ...
+...
+PSSO         14m28s (14m24s)   ...
+...
+
+Table (RQ1) Runtimes per clone search (sec).
+Include preprocessing time.
+Significant preprocessing times reported in "( )".
+                     Basic   ...
+...
+PSSO         0.26s (0.26s)   ...
+...
+
+Loading the RQ2 Table ...
+Table (RQ2) Pecision Scores.
+            Basic  ...
+...
+PSSO         0.38  ...
+...
+
+Table (RQ3) Average rank-biserial correlation for H on the Basic dataset.
+                              CO              UO              BO         Average
+...
+PSSO               \textbf{0.12}   \textbf{0.09}  \textbf{-0.02}   \textbf{0.06}
+...
+
+...
+
+All Tables generated in 101.98 s
 ```
 
 
