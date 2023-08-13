@@ -1,6 +1,6 @@
 # Examples
 
-## PSSO on the Basic Dataset (6 minutes)
+## PSSO on the Basic Dataset (8 minutes)
 
 **Command:**
 ```bash
@@ -44,7 +44,7 @@ tqdm bar
 **Command:**
 ```bash
 cd ../
-python3 ReadTables.py
+python3 MakeTables.py
 ```
 
 **Output:**
