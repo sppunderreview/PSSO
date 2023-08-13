@@ -5,7 +5,7 @@ Since a program is inside 3 test fields, we perform three clone searches for eac
 In this regard, we had to measure each program's preprocessing three times in total runtimes, but we counted it only once.
 
 Under this correction, the total preprocessing running times of ASCG, ASCFG, PSS, and PSSO have been multiplied by 3. 
-Importantly, time spent per clone search for PSS and PSSO remains unchanged at 1.41 and 0.27, respectively. 
+Importantly, runtime spent per clone search for PSS and PSSO remains unchanged at 1.41s and 0.27s, respectively. 
 
 For PSS, the total runtime has gone from 26m7s to 1h18m, and for PSSO, from 5m4s to 15m8s. 
 
