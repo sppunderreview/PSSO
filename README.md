@@ -9,7 +9,7 @@ This artifact encompasses 21 distinctive clone search methods. Each method is di
 Overall, the artifact is a purposely-built framework for clone search method comparison.
 It is easily extensible and can be tweaked to carry out new measurements.
 
-The artifact includes four datasets with vast numbers of programs: Basic (1K), BinKit (96K),  IoT (20K), and Windows (85K). Due to the enormous scale of these datasets, this artifact demands significant time consumption. To offer a perspective, the disassembly process on these considerable datasets can take days even when operating on 20 cores. The subsequent steps, such as preprocessing and clone searches, can also demand hundreds of hours. Note that we have gathered 2 TB of disassembly files throughout accumulating this data. 
+The artifact includes four datasets with vast numbers of programs: Basic (1K), BinKit (96K),  IoT (20K), and Windows (85K). Due to the enormous scale of these datasets, this artifact demands significant time consumption. To offer a perspective, the disassembly process on these considerable datasets can take days even when operating on 20 cores. The subsequent steps, such as preprocessing and clone searches, can also demand hundreds of hours. Note that we have gathered 2 TB of disassembled files throughout accumulating this data. 
 
 To tackle these time and space constraints, we have ensured that precomputed data are available within this artifact at multiple workflow phases. This enables a quick transition from reproducing one workflow phase to another. However, we could not include all disassembled files, so we mainly focused on the last phases, such as a clone search.
 
@@ -44,9 +44,9 @@ The artifact includes implementations of 21 distinct clone search methods, compr
 ### Data Repositories 
 
 The artifact features four datasets:
-- The `Basic` folder holds comprehensive data about a thousand programs. It includes source code and disassembly files.
-- The `IoT` folder holds twenty thousand malware taken from  [MalwareBazaar](https://bazaar.abuse.ch/), plus scripts for selecting, downloading, and labeling the data, along with all disassembly files and features.
-- Due to size constraints and copyright issues respectively, complete disassembly files and software aren't included inside `BinKit` and `Windows` folders. However, setup for disassembly and feature extraction reproduction is included. The BinKit dataset is readily accessible [here](https://github.com/SoftSec-KAIST/BinKit).
+- The `Basic` folder holds comprehensive data about a thousand programs. It includes source code and disassembled files.
+- The `IoT` folder holds twenty thousand malware taken from  [MalwareBazaar](https://bazaar.abuse.ch/), plus scripts for selecting, downloading, and labeling the data, along with all disassembled files and features.
+- Due to size constraints and copyright issues respectively, complete disassembled files and software aren't included inside `BinKit` and `Windows` folders. However, setup for disassembly and feature extraction reproduction is included. The BinKit dataset is readily accessible [here](https://github.com/SoftSec-KAIST/BinKit).
 
 ## Usage - Basic Dataset
 For Basic dataset computation, ensure you have run `python3 SetAbsolutePath.py`.
