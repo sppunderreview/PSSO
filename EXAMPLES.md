@@ -147,7 +147,7 @@ All Tables generated in 101.98 s
 ```
 
 
-## SAFE Function Embedding on the Coreutils Versions Subdataset (8 minutes)
+## Coreutils Versions Subdataset: SAFE Function Embedding  (8 minutes)
 Demonstrate the use of SAFE Function Embedding.
 
 Due to the time-intense process of SAFE clone searches (655 hours),  only part of SAFE preprocessing is shown in this example.
@@ -186,7 +186,7 @@ Inside 348 programs of Coreutils Versions
 
 You can quit the bash terminal to end the visualization script.
 
-## StringSet on a hundred IoT Malware (5 minutes)
+## IoT Malware Dataset: StringSet  (5 minutes)
 
 Replicate the method StringSet on 157 IoT Malware samples.
 
@@ -253,7 +253,7 @@ python3 IoT_Small.py
 StringSet                0.01s     0.682                     2s
 ```
 
-## PSSO on a Small Part of the Windows Dataset (7 minutes)
+## Windows Dataset: PSSO (7 minutes)
 
 Replicate PSSO clone searches on a small part of the Windows dataset.
 
@@ -286,9 +286,9 @@ python3 Windows_Small.py
 PSSO        1.56s (0.39s)     0.430          5h27m (5h23m)
 ```
 
-## MutantX-S on the Clang v7/v4 Test Field of the BinKit Dataset (20 minutes)
+## BinKit Dataset: MutantX-S (20 minutes)
 
-Replicate MutantX-S clone searches on one cross-compiler test field.
+Replicate MutantX-S clone searches on the cross-compiler test field 'Clang v7 vs. Clang v4' of the BinKit normal dataset.
 
 This example does not include the preprocessing phase because the samples and disassembly files were too big to be included directly.
 
