@@ -108,8 +108,8 @@ Lastly, the `Redaction` subdirectory in each dataset includes scripts for comput
 
 ## Corrections
 We have corrected two measurements in the Camera Ready version of our article:
-- We had to multiply the preprocessing runtimes of PSS, PSSO and ASCG by 3 on the Basic dataset (see [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details).
-- We had to correct the preprocessing runtimes of PSS and ASCG on 30 large target programs over 49,443 on the Windows dataset (see [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details).
+- We had to multiply the preprocessing runtimes of PSS, PSSO and ASCG by 3 on the Basic dataset. Even after that, PSS remains 10 times faster than the fastest method previously eliminated. See [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details.
+- We had to correct the preprocessing runtimes of PSS and ASCG on 30 large target programs over 49,443 on the Windows dataset. See [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details.
 
 ## Abstract
 We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection.
