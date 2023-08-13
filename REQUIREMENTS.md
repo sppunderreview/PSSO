@@ -11,5 +11,5 @@ Please refer to the INSTALL file for instructions on how to install the three ne
 
 ## Optional Requirements:
 - IDA Pro for disassembly reiteration (Version 7.5 or a version close to this is preferred).
-- For some experiments like clone searches using StringSet or during the learning phase of machine learning frameworks, a RAM capacity of nearly 100 GB is needed.
+- For some experiments like clone searches using StringSet or during the learning phase of machine learning frameworks, a RAM capacity of 100 GB is needed.
 
