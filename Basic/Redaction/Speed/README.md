@@ -2,5 +2,11 @@
 ## Correction
 Each Basic dataset has six different test fields (e.g., O0O1, O0O2, O0O3, O1O2, O1O3, O2O3).
 Since a program is inside 3 test fields, we perform three clone searches for each program.
-Therefore, we have to measure three times the preprocessing of each program.
-The total preprocessing running times of ASCG, ASCFG, PSS, and PSSO have been multiplied by 3.
+In this regard, we had to measure each program's preprocessing three times in total runtimes, but we counted it only once.
+
+Under this correction, the total preprocessing running times of ASCG, ASCFG, PSS, and PSSO have been multiplied by 3. 
+Importantly, time spent per clone search for PSS and PSSO remains unchanged at 1.41 and 0.27, respectively. 
+
+For PSS, the total runtime has gone from 26m7s to 1h18m, and for PSSO, from 5m4s to 15m8s. 
+
+This correction does not alter our original findings. Before this correction, PSS, with a total processing time of 26m7s, was identified as being 32 times faster than the slowest method we previously eliminated, LibDB, with a runtime of 16h. Thus, even after adjusting the processing times by a factor of three, PSS, now at 1h18m, remains 10 times faster than the fastest method previously eliminated. Therefore, the overall impact of this correction is limited.
