@@ -80,7 +80,7 @@ cd AlphaDiff/AD_gDist/
 python3 Run.py
 ```
 
-Only after that can similarity indices be computed from these computations.
+After that can similarity indices be computed from these computations.
 ```bash
 cd AlphaDiff/makeResults/
 python3 RunMakeMD3.py
