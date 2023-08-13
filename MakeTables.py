@@ -79,7 +79,7 @@ binkitPrecision = selectColumnAndName(readBinkitPrecisionRQ2(), "AVG", "BinKiT")
 iotPrecision = selectColumnAndName(readIoTPrecicionRQ2(), "AVG", "IoT")
 windowsPrecision = selectColumnAndName(readWindowsPrecisionRQ2(), "AVG", "Windows")
 
-print("Table (RQ2) Pecision Scores.")
+print("Table (RQ2) Precision Scores.")
 tableSpeedAVG = fusionTables(basicPrecision, binkitPrecision, iotPrecision, windowsPrecision)
 printTable(tableSpeedAVG)
 
