@@ -4,9 +4,10 @@
 
 **Command:**
 ```bash
+conda activate PSS_Base
 python3 SetAbsolutePaths.py
 cd PSSO/
-python3 Preprocessing.py 
+python3 Preprocess.py 
 ```
 
 **Output:**
@@ -56,6 +57,7 @@ python3 ReadTables.py
 
 **Command:**
 ```bash
+conda activate PSS_Base
 cd SAFE/makeEmbeds
 python3 computesEmbeddings.py
 ```
@@ -76,6 +78,7 @@ IMAGE
 
 **Command:**
 ```bash
+conda activate PSS_Base
 cd IoT/DataGeneration/STRINGSET/
 python3 Preprocess.py
 ```
@@ -125,6 +128,7 @@ StringSet 0.01s        0.682            2s
 
 **Command:**
 ```bash
+conda activate PSS_Base
 cd Windows/PSSO
 unzip EMBEDS.zip
 mkdir RS/
@@ -150,10 +154,11 @@ PSSO    1.57s (0.39s)        0.430            5h27m(5h23m)
 
 **Command:**
 ```bash
+conda activate PSS_Base
 cd BinKiT/Normal/
 unzip EMBEDS.zip
 cd EMBEDS/
-7z x MUTANTX2.7z (2 GIGA)
+7z x MUTANTX2.7z
 cd ../
 mkdir RS/
 python3 RunSmallMX.py
