@@ -4,6 +4,7 @@
 
 **Command:**
 ```bash
+python3 SetAbsolutePaths.py
 cd PSSO/
 python3 Preprocessing.py 
 ```
