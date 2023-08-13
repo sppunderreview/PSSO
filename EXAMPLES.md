@@ -1,6 +1,6 @@
 # Examples
 
-## PSSO on the Basic Dataset (8 minutes)
+## Basic Dataset: PSSO (8 minutes)
 Replicate our method Program Spectral Similarity Optimized (PSSO) on the Basic dataset.
 
 This process will encompass everything from preprocessing to the generation of tables, including the computation of similarity indices.
@@ -65,7 +65,7 @@ Computing similarity indices for Program cp with O0
 ...
 ```
 
-### Clone Searches on all Testfields
+### Clone Searches on all Test Fields
 **Command:**
 ```bash
 python3 RunMakeMD.py 
@@ -73,25 +73,25 @@ python3 RunMakeMD.py
 **Output:**
 ```console
 Basic Subdataset BO
-Testfield O0 -> O1
+Test Field O0 -> O1
 100%|███████████████████| 21/21 [00:00<00:00, 44984.87it/s]
-Testfield O0 <- O1
+Test Field O0 <- O1
 100%|| 21/21 [00:00<00:00, 125649.62it/s]
-Testfield O0 <-> O1
+Test Field O0 <-> O1
 100%|███████████████████| 42/42 [00:00<00:00, 65341.53it/s]
 Basic Subdataset BO
-Testfield O0 -> O2
+Test Field O0 -> O2
 100%|███████████████████| 21/21 [00:00<00:00, 144869.05it/s]
-Testfield O0 <- O2
+Test Field O0 <- O2
 100%|███████████████████| 21/21 [00:00<00:00, 144631.17it/s]
-Testfield O0 <-> O2
+Test Field O0 <-> O2
 100%|███████████████████| 42/42 [00:00<00:00, 66076.81it/s]
 Basic Subdataset BO
-Testfield O0 -> O3
+Test Field O0 -> O3
 100%|███████████████████| 21/21 [00:00<00:00, 142294.64it/s]
-Testfield O0 <- O3
+Test Field O0 <- O3
 100%|███████████████████| 21/21 [00:00<00:00, 90153.92it/s]
-Testfield O0 <-> O3
+Test Field O0 <-> O3
 100%|███████████████████| 42/42 [00:00<00:00, 38521.93it/s]
 ...
 ```
@@ -286,13 +286,13 @@ python3 Windows_Small.py
 PSSO        1.56s (0.39s)     0.430          5h27m (5h23m)
 ```
 
-## MutantX-S on the Clang v7/v4 Testfield of the BinKit Dataset (20 minutes)
+## MutantX-S on the Clang v7/v4 Test Field of the BinKit Dataset (20 minutes)
 
-Replicate MutantX-S clone searches on one cross-compiler testfield.
+Replicate MutantX-S clone searches on one cross-compiler test field.
 
-This example does not include the preprocessing phase, because the samples and disassembly files were too big to be included directly.
+This example does not include the preprocessing phase because the samples and disassembly files were too big to be included directly.
 
-However, if you download BinKit samples [here](https://github.com/SoftSec-KAIST/BinKit) and place them into `BinKit/Normal/DataGeneration/samples/`, you can disassemble them using scripts inside `BinKit/Normal/DataGeneration` and perform MutantX-S preprocessing with `BinKit/Normal/DataGeneration/MUTANTX/Preprocess.py`. Be warned, this would take days.
+However, if you download BinKit samples [here](https://github.com/SoftSec-KAIST/BinKit) and place them into `BinKit/Normal/DataGeneration/samples/`, you can disassemble them using scripts inside `BinKit/Normal/DataGeneration` and perform MutantX-S preprocessing with `BinKit/Normal/DataGeneration/MUTANTX/Preprocess.py`. Be warned that this will take days.
 
 
 ### Clone Searches
