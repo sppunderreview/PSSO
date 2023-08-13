@@ -63,7 +63,9 @@ For instance, a function embedding such as AlphaDiff requires a learning phase o
 ```bash
 conda activate PSS_Base
 cd AlphaDiff/Train
-python3 main.py 
+unzip datasetAD.Py
+python3 main.py
+rm datasetAD.h5
 ```
 
 It is followed, by an embedding computation phase of 5 hours.
