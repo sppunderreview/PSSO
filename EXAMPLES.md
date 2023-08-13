@@ -152,7 +152,8 @@ python3 computesEmbeddings.py
 ```
 **Output:**
 ```console
-...
+Computing Coreutils Versions functions embeddings for each program! (5 minutes)
+ 100%|████████████████████| 348/348 [04:15<00:00,  1.36it/s]
 ```
 
 **Command:**
@@ -161,9 +162,14 @@ python3 readEmbeddings.py
 ```
 
 **Output:**
-IMAGE
+# of unique function names: 5083
+```console
+Function: .init_proc
+Inside 348 programs of Coreutils Versions
+...
+```
 
-You can quit the bash terminal to end the python script.
+You can quit the bash terminal to end the visualization script.
 
 ## StringSet on a hundred IoT malwares (5 minutes)
 
