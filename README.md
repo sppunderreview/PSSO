@@ -54,7 +54,7 @@ Inside a method folder:
 
 To reproduce the feature extraction, usually a script called `Preprocess.py` can be run.
 
-Some frameworks have a more complex feature extraction workflow. For instance, a function embedding requires a learning phase and an embedding generation phase. Only after distance computations (`gDist` folders) are done can similarity indices be computed from these computations.
+Some frameworks have a more complex feature extraction workflow. For instance, a function embedding such as Gemini requires a learning phase and an embedding generation phase. Only after distance computations (`gDist` folders) are done can similarity indices be computed from these computations.
 
 ## Usage - BinKit Dataset
 The `BinKit` directory has two subdirectories, namely, `Obfus`, which deals with obfuscated programs, and `Normal`. 
