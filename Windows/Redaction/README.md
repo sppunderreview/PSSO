@@ -1,6 +1,6 @@
 # RQ1: Evaluation of Speed (Windows)
 ## Correction
-Initially, for PSS and ASCG preprocessing, 30 very large programs out of a total of 49,443 were run with multiple processors. A coefficient was applied to recover a comparable runtime for query preprocessing. We have replaced this estimate with a computation with one processor. The initial estimation was too optimistic, and the larger and heavier programs are particularly slow on PSS, noticeably influencing the average.
+Initially, for PSS and ASCG preprocessing, 30 very large targets out of a total of 49,443 were run with multiple processors. A coefficient was applied to recover a comparable runtime for query preprocessing. We have replaced this estimate with a computation with one processor. The initial estimation was too optimistic, and the larger and heavier programs are particularly slow on PSS, noticeably influencing the average.
 
 Prior to this correction, the mean preprocessing run time was 13.42 seconds, and the median was 0.12563, with a minimum time of 0.00139 and a maximum time of 10,074 seconds. 
  
