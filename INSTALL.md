@@ -66,20 +66,71 @@ An optional environment to run Gencoding which disassembles programs and outputs
 conda create --name PSS_Gencoding --file requirements_PSS_Gencoding.txt
 ```
 
-## Basic Usage Example
+## Usage Example
 
 To confirm that the artifact is installed and working, follow the steps below:
 
-```shell
-conda activate PSS_Base
-cd SAFE/makeEmbeds/
-python3 computesEmbeddings.py
+1. Activate the environment with `conda activate PSS_Base`
+2. Run `python3 MakeTables.py`
+
+The above will produce in a few minutes the Tables of the Camera Ready version of our article using precomputed results.
+
+**Output**
+```
+Loading the Preliminary Evaluation Table ...
+Table (Preliminary Evaluation) Total runtimes on the Basic dataset
+               Total
+Bsize             6s
+Dsize             5s
+Shape          1m22s
+ASCG           1h18m
+ASCFG        127h52m
+GED-0         81h22m
+MutantX-S         4s
+Asm2vec      141h20m
+Gemini       102h45m
+SAFE         655h51m
+PSS            1h18m
+PSSO           15m9s
+GED-L         46h57m
+SMIT         3634h5m
+CGC          171h57m
+AlphaDiff    642h59m
+LibDX           1m4s
+LibDB         16h28m
+StringSet        38s
+FunctionSet       3s
+
+...
+
+Table (RQ3) Average rank-biserial correlation for H on the Basic dataset.
+                              CO              UO              BO         Average
+Bsize              \textbf{0.07}   \textbf{0.03}  \textbf{-0.04}   \textbf{0.02}
+Dsize              \textbf{0.02}   \textbf{0.06}  \textbf{-0.04}   \textbf{0.01}
+Shape              \textbf{0.10}   \textbf{0.06}  \textbf{-0.04}   \textbf{0.04}
+ASCG                      {0.19}   \textbf{0.08}  \textbf{-0.04}   \textbf{0.08}
+ASCFG                     {0.30}          {0.17}  \textbf{-0.02}   \textbf{0.15}
+GED-0                     {0.25}   \textbf{0.05}  \textbf{-0.04}   \textbf{0.09}
+MutantX-S                 {0.63}          {0.28}   \textbf{0.08}          {0.33}
+Asm2vec                   {1.00}          {0.65}          {0.45}          {0.70}
+Gemini                    {0.96}          {0.37}   \textbf{0.06}          {0.46}
+SAFE                      {0.98}          {0.38}   \textbf{0.11}          {0.49}
+PSS                \textbf{0.13}   \textbf{0.09}  \textbf{-0.02}   \textbf{0.07}
+PSSO               \textbf{0.12}   \textbf{0.09}  \textbf{-0.02}   \textbf{0.06}
+GED-L                     {0.21}   \textbf{0.08}  \textbf{-0.04}   \textbf{0.08}
+SMIT              \textbf{-0.57}  \textbf{-0.44}  \textbf{-0.07}  \textbf{-0.36}
+CGC                       {0.32}   \textbf{0.07}  \textbf{-0.08}   \textbf{0.10}
+AlphaDiff                 {0.93}          {0.33}   \textbf{0.11}          {0.46}
+LibDX             \textbf{-0.02}  \textbf{-0.16}  \textbf{-0.05}  \textbf{-0.08}
+LibDB_Robustness          {0.46}          {0.22}  \textbf{-0.03}          {0.22}
+StringSet                 {0.86}          {0.31}          {0.18}          {0.45}
+FunctionSet               {0.37}          {0.22}   \textbf{0.02}          {0.20}
+
+
+All Tables generated in 101.85 s
 ```
 
-This command will compute function embeddings for the subdataset UtilsOptions of the dataset Basic using a precomputed model for SAFE.
-The command should display a `tqdm` progress bar ranging from 0 to 88.
-It will take about half an hour to get every function embeddings from all 88 programs.
-You can stop it at any moment and look at the files you have produced inside `SAFE/makeEmbeds/UO` folder.
+See [EXAMPLES.md](EXAMPLES.md) for five quick examples of replications using this artifact.
 
 ## Software for Asm2Vec
 To reproduce Asm2Vec experiments, you will need Eclipse IDE with JDK 11.
