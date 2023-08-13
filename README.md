@@ -2,7 +2,7 @@
 
 We focus on the problem of program clone search, which involves finding the program in a repository most similar to a target program. Program clone search has important applications, including malware detection and program clustering.
 
-In solving this problem, the inherent workflow involves disassembly, feature extraction, clone searches, and subsequent generation of tables. 
+In solving this problem, the inherent workflow involves disassembly, feature extraction (or preprocessing), clone searches, and subsequent generation of tables. 
 
 A good similarity metric is crucial to finding the repository's closest program. It has to be precise and robust even in cross-architecture scenarios and fast even when dealing with huge repositories. 
 This artifact encompasses 21 distinctive clone search methods. Each method is different, and therefore, their workflow may be slightly different.
@@ -65,7 +65,7 @@ Each subdirectory entails a `DataGeneration` folder which holds the disassembly 
 These method folders have scripts to extract features and embeds from samples.
 
 Each subdirectory contains three significant scripts:
-1. `Run.py`: This script reproduces clone searches using precomputed embeddings in folders like `NORMAL_EMBEDS_2`.
+1. `Run.py`: This script reproduces clone searches using precomputed features stored in folders like `NORMAL_EMBEDS_2`.
 2. `Read.py`: It converts the results into a readable output.
 3. `ReadElapsed.py`: It converts the results into a dictionary storing running times.
 
