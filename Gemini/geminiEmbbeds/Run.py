@@ -46,9 +46,9 @@ def extractVectors(nameDS):
             pickle.dump(vectors, f)
         i += 1
         
-#extractVectors("CO")
-#extractVectors("CV")
-#extractVectors("BO")
-#extractVectors("BV")
-#extractVectors("UV")
-#extractVectors("UO")
+extractVectors("CO")
+extractVectors("CV")
+extractVectors("BO")
+extractVectors("BV")
+extractVectors("UV")
+extractVectors("UO")

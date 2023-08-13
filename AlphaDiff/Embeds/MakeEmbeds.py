@@ -31,10 +31,10 @@ if __name__ == '__main__':
     from makeBenchUV import benchmarkUV
     from makeBenchCV import benchmarkCV
     from makeBenchCO import benchmarkCO
-                 #
+    
     run(benchmarkCV("V0","V1"),benchmarkCV("V2","V3"),"CV")
-    run(benchmarkCO("O0","O1"),benchmarkCO("O2","O3"),"CO")    
-    run(benchmarkUV("V0","V1"),benchmarkUV("V2","V3"),"UV")
+    #run(benchmarkCO("O0","O1"),benchmarkCO("O2","O3"),"CO")    
+    #run(benchmarkUV("V0","V1"),benchmarkUV("V2","V3"),"UV")
     #run(benchmarkUO("O0","O1"),benchmarkUO("O2","O3"),"UO")    
     #run(benchmarkBV("V0","V1"),benchmarkBV("V2","V3"),"BV")
     #run(benchmarkBO("O0","O1"),benchmarkBO("O2","O3"),"BO")

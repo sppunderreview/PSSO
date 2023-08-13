@@ -80,10 +80,10 @@ def main():
 
     
     model = ConvNet()
-    model.load_state_dict(torch.load("cnn_12.pt"))
+    #model.load_state_dict(torch.load("cnn_12.pt"))
     model = model.to(device)
     optimizer = optim.RMSprop(model.parameters(),  lr=0.001, alpha=0.9, eps=1e-08, weight_decay=0, momentum=0, centered=False)
-    optimizer.load_state_dict(torch.load("optim_12.pt"))
+    #optimizer.load_state_dict(torch.load("optim_12.pt"))
     
     trainable_params =  sum(p.numel() for p in model.parameters() if p.requires_grad)    
     print("# Trainable", trainable_params)
