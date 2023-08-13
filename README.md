@@ -59,19 +59,28 @@ To reproduce the feature extraction, usually a script called `Preprocess.py` can
 
 Some frameworks have a more complex feature extraction workflow.
 
-For instance, a function embedding such as Gemini requires a learning phase with 100 GB of RAM:
+For instance, a function embedding such as AlphaDiff requires a learning phase of ??? hours with 100 GB of RAM.
+**Command**
 ```bash
-conda activate PSS_Gemini
-cd Gemini/geminiTraining
-python3 Run.py 
+conda activate PSS_Base
+cd AlphaDiff/Train
+python3 main.py 
 ```
-Followed by an embedding computation phase plus a cleaning to remove empty functions:
+
+Followed by an embedding computation phase, here only for Coreutils Versions.
+**Command**
 ```bash
-cd Gemini/geminiEmbbeds/
-python3 Run.py
-cd ../cleanEmbbeds/
-python3 cleanVectors.py
+cd AlphaDiff/Embeds/
+python3 MakeEmbeds.py
 ```
+**Output**
+```css
+cd AlphaDiff/Embeds/
+python3 MakeEmbeds.py
+```
+
+Then, cleaning to remove empty functions:
+
 Only after distance computations (`gDist` folders) are done can similarity indices be computed from these computations.
 
 ## Usage - BinKit Dataset
