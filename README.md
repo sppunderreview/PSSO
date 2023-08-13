@@ -25,13 +25,14 @@ For additional details, please consult [REQUIREMENTS.md](REQUIREMENTS.md).
 
 In order to clone this repository, you will need git-lfs first, please refer to [INSTALL.md](INSTALL.md).
 
-## Example of Use
+## Examples of Use
 
 1. Activate the environment with `conda activate PSS_Base`
 2. Run `python3 MakeTables.py` 
 
 The above will produce in a few minutes the Tables of the Camera Ready version of our article using precomputed results.
-See [EXAMPLES.md](EXAMPLES.md) for five quick examples of reproduction using this artifact.
+
+See [EXAMPLES.md](EXAMPLES.md) for five quick examples of replications using this artifact.
 
 
 ## Content Overview
