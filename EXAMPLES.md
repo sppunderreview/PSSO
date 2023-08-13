@@ -58,6 +58,7 @@ python3 MakeTables.py
 **Command:**
 ```bash
 conda activate PSS_Base
+python3 SetAbsolutePaths.py
 cd SAFE/makeEmbeds
 python3 computesEmbeddings.py
 ```
@@ -73,6 +74,8 @@ python3 readEmbeddings.py
 
 **Output:**
 IMAGE
+
+You can quit the bash terminal to end the python script.
 
 ## StringSet on a hundred IoT malwares (5 minutes)
 
@@ -103,7 +106,7 @@ Size after restriction: 157
 **Command:**
 ```bash
 mv final/STRINGS ../../XP/
-cd ../XP/
+cd ../../XP/
 mkdir RS/
 python3 RunSmallStringSet.py 
 ```
