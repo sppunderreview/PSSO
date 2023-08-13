@@ -57,31 +57,33 @@ Inside a method folder:
 
 To reproduce the feature extraction, usually a script called `Preprocess.py` can be run.
 
-Some frameworks have a more complex feature extraction workflow.
+Some frameworks have a more complex feature extraction workflow that can take a certain amount of computation.
 
-For instance, a function embedding such as AlphaDiff requires a learning phase of ??? hours with 100 GB of RAM.
-**Command**
+For instance, a function embedding such as AlphaDiff requires a learning phase of around 60 hours with 100 GB of RAM.
 ```bash
 conda activate PSS_Base
 cd AlphaDiff/Train
 python3 main.py 
 ```
 
-Followed by an embedding computation phase, here only for Coreutils Versions.
-**Command**
+It is followed, by an embedding computation phase of 5 hours.
 ```bash
 cd AlphaDiff/Embeds/
 python3 MakeEmbeds.py
 ```
-**Output**
-```css
-cd AlphaDiff/Embeds/
-python3 MakeEmbeds.py
+
+Then, a distance computation phase of around 20 hours using 40 cores and 100 GB of RAM.
+```bash
+cd AlphaDiff/AD_gDist/
+python3 Run.py
 ```
 
-Then, cleaning to remove empty functions:
-
-Only after distance computations (`gDist` folders) are done can similarity indices be computed from these computations.
+Only after that can similarity indices be computed from these computations.
+```bash
+cd AlphaDiff/makeResults/
+python3 RunMakeMD3.py
+python3 RunMakeMD.py
+```
 
 ## Usage - BinKit Dataset
 The `BinKit` directory has two subdirectories, namely, `Obfus`, which deals with obfuscated programs, and `Normal`. 
