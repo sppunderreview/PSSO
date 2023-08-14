@@ -13,6 +13,8 @@ import numpy as np
 def command(id, maxId):
     return "python3 computeDistances.py "+str(id)+" "+str(maxId)
 
+print("Need 35 hours divided by the number of cores")
+
 start = time.time()
 cores = 35
 jobT = ""

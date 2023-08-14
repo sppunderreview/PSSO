@@ -40,6 +40,8 @@ def run(O, nameXP):
 
     print(nameXP, time.time()-start)
 
+print("Need 2 hours")
+
 if __name__ == '__main__':
     targets = set(["recutils-1.7_gcc-6.4.0_x86_32_O2_librec.so.1.0.0.elf","coreutils-8.29_gcc-6.4.0_x86_32_O2_libstdbuf.so.elf","gsl-2.5_gcc-6.4.0_x86_32_O2_libgsl.so.23.1.0.elf","libiconv-1.15_gcc-6.4.0_x86_32_O2_libiconv.so.2.6.0.elf","libtasn1-4.13_gcc-6.4.0_x86_32_O2_libtasn1.so.6.5.5.elf","libmicrohttpd-0.9.59_gcc-6.4.0_x86_32_O2_libmicrohttpd.so.12.46.0.elf","readline-7.0_gcc-6.4.0_x86_32_O2_libhistory.so.7.0.elf","osip-5.0.0_gcc-6.4.0_x86_32_O2_libosip2.so.12.0.0.elf","lightning-2.1.2_gcc-6.4.0_x86_32_O2_liblightning.so.1.0.0.elf","libunistring-0.9.10_gcc-6.4.0_x86_32_O2_libunistring.so.2.1.0.elf","gsl-2.5_gcc-6.4.0_x86_32_O2_libgslcblas.so.0.0.0.elf","libtool-2.4.6_gcc-6.4.0_x86_32_O2_libltdl.so.7.3.1.elf","gmp-6.1.2_gcc-6.4.0_x86_32_O2_libgmp.so.10.3.2.elf","gdbm-1.15_gcc-6.4.0_x86_32_O2_libgdbm.so.6.0.0.elf","readline-7.0_gcc-6.4.0_x86_32_O2_libreadline.so.7.0.elf","osip-5.0.0_gcc-6.4.0_x86_32_O2_libosipparser2.so.12.0.0.elf","libiconv-1.15_gcc-6.4.0_x86_32_O2_libcharset.so.1.0.0.elf","gsasl-1.8.0_gcc-6.4.0_x86_32_O2_libgsasl.so.7.9.6.elf","gss-1.0.3_gcc-6.4.0_x86_32_O2_libgss.so.3.0.3.elf","glpk-4.65_gcc-6.4.0_x86_32_O2_libglpk.so.40.3.0.elf"])
 
