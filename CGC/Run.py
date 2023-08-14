@@ -67,17 +67,23 @@ def run(OA, OB, idP, maxID, nameXP):
                 f.write(str([idP,idS,idS2,dL,elpased, totalT/N, totalT, N])+"\n")
         i += 1
  
+ print("Need 170 hours divided by the number of cores")
+ 
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_CV 
     sys.path.insert(0, "????") # PSS_PATH_BASIC_CO 
     sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
-    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO
 
     from makeBenchCV import benchmarkCV    
     from makeBenchCO import benchmarkCO    
     from makeBenchUV import benchmarkUV    
     from makeBenchUO import benchmarkUO     
+    from makeBenchBV import benchmarkBV    
+    from makeBenchBO import benchmarkBO     
     
     P = 30
     

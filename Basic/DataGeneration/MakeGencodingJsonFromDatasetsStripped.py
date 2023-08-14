@@ -4,7 +4,7 @@ from os import system
 
 print "Hello, here is the script to replay the disassembly with IDA and features extraction with Gencoding.\n"
 print "It extract from samples from each Basic Dataset to get Gemini features.\n"
-
+print "Need 3 hours to be run"
 
 print "Enter the absolute path to IDApro v7.5 folder:"
 pathIdaFolder = raw_input()

@@ -15,6 +15,9 @@ def command(folder, id, maxId):
 
 toDo = ["CV","CO","UV","UO","BV","BO"]
 
+print("Need 650 hours divided by the number of cores")
+
+
 for dir in toDo:
     start = time.time()
     cores = 40

@@ -69,7 +69,9 @@ def minRun(O, folder, nameXP):
 def run(O, nameXP):
     minRun(O, "./", nameXP)
  
-    
+ 
+print("Need 5 minutes")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 

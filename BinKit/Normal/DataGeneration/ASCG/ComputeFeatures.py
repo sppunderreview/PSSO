@@ -60,6 +60,7 @@ def computeEmbeddings(toDo):
 			print(u*100/len(toDo),"%", int(timeLeft), "s")
 			startBS = time.time()
 
+
 if __name__ == '__main__':
 	goodware = []
 	for path in Path('../jsons').rglob('*'):

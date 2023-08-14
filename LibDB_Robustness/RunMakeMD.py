@@ -79,6 +79,7 @@ def minRun(O, folder, nameXP):
 def run(O, nameXP):
     minRun(O, "./", nameXP)
 
+print ("Need 16 hours divided by the number of cores")
 
 if __name__ == '__main__':
     import sys

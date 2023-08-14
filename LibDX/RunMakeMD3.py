@@ -36,6 +36,10 @@ def run(O, nameDS):
 
     minRun(O, embeds, nameDS+"_MD", nameDS)
 
+print("This is not used in the paper, since it handle repository containing all programs of a subdataset.")
+print("Need 30 minutes.")
+
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 

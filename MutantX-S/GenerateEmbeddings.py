@@ -91,6 +91,8 @@ def computesEmbeddingFromBytes(nameDS, idS):
     with open(pathOutput, "wb") as f:
         pickle.dump(data, f)
 
+print("Need 1 hour divided by the number of cores")
+
 if __name__ == '__main__':
     PN = 4
 

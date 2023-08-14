@@ -35,6 +35,8 @@ def similarity(functionsDataS, graphPPredsS, graphPSuccsS, programsSNE, function
 def similarityAll(functionsData, graphPPreds, graphPSuccs, programsNE, pS, pT):    
     return functionCallSimilarity(functionsData[str(pS)], graphPPreds[str(pS)], graphPSuccs[str(pS)], programsNE[str(pS)], functionsData[str(pT)], graphPPreds[str(pT)], graphPSuccs[str(pT)], programsNE[str(pT)])
 
+print("Need 50 hours divided by the number of cores")
+
 def run(OA, OB, idP, maxID, nameXP):
     random.seed(10)
     

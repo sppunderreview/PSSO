@@ -4,6 +4,9 @@ from multiprocessing import Process
 import time
 import os
 
+print("Can't be run because cfgbuilder is private property")
+print("Old correction that is useless to replicate now")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 

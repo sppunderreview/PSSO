@@ -74,6 +74,8 @@ def run(O, nameXP):
     minRun(O, "./", nameXP)
 
 
+print("Need 16 hours divided by the number of cores")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
@@ -107,14 +109,13 @@ if __name__ == '__main__':
     P17D = benchmarkCV("V1","V3")
     P18D = benchmarkCV("V2","V3")
 
-    run(P13D,"CV0V1")
 
-    """run(P1D,"BO0O1")
+    run(P1D,"BO0O1")
     run(P2D,"BO0O2")
     run(P3D,"BO0O3")
     run(P4D,"BO1O2")
     run(P5D,"BO1O3")
-    run(P6D,"BO2O3")"""
+    run(P6D,"BO2O3")
 
     run(P7D,"BV0V1")
     run(P8D,"BV0V2")
@@ -123,6 +124,7 @@ if __name__ == '__main__':
     run(P11D,"BV1V3")
     run(P12D,"BV2V3")
 
+    run(P13D,"CV0V1")
     run(P14D,"CV0V2")
     run(P15D,"CV0V3")
     run(P16D,"CV1V2")

@@ -9,6 +9,8 @@ def run(O, nameXP):
     with open("A_"+nameXP, "wb") as f:
         pickle.dump(embedsO, f)
 
+print("Need 6 minutes")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 

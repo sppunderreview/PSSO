@@ -2,6 +2,8 @@ import time
 import os
 from multiprocessing import Process
 
+print("Need 4 hours divided by the number of cores")
+
 def extractBytesFromProgram(nameDS, idS, subPath):	
     pathIntput = os.path.join("/".join(os.path.abspath(__file__).split("/")[:-2]), "Basic", "G"+subPath, "samples", str(idS) )
     pathIdaOut = pathIntput+"_bytes.json"    

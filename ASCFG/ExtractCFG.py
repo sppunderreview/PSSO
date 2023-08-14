@@ -23,6 +23,8 @@ def run(O, nameXP):
         elasped = time.time()-start
         print(nameXP[0:2],idS,elasped)
 
+print("Can't be run because cfgbuilder is private property")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 

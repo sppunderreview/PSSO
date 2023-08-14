@@ -1,6 +1,7 @@
 from os import system
 
 print("Hello, here is the script to replay the disassembly of Basic datasets with IDA.\n")
+print("Need 3 hours to be run")
 
 print("Enter the absolute path to IDApro v7.5 folder:") 
 pathIdaFolder = input()

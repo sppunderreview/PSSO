@@ -7,7 +7,7 @@ from random import seed, shuffle
 from multiprocessing import Process
 
 
-
+print("Need 150 cores divided by the number of cores")
 print("Enter number of cpu:") 
 PN = int(input())
 print("Enter the absolute path to IDApro v7.5 idat64 executable:") 

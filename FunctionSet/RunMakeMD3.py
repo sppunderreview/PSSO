@@ -33,6 +33,8 @@ def run(O, nameXP):
             MD[idS][idS2] = (name,name2,compilerOption,compilerOption2,d,elpased)    
     with open(outputFile, "wb") as f:
         pickle.dump(MD, f)
+
+print("Need 5 minutes")
     
 if __name__ == '__main__':
     import sys

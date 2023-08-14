@@ -69,7 +69,9 @@ def run(OA, OB, idP, maxID, nameXP):
         
     with open(outputElapsed, "wb") as f:
         pickle.dump(elapsed, f)
-        
+
+print("Need 80 hours divided by the number of cores")
+
 if __name__ == '__main__':
     import sys
 

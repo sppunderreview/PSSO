@@ -35,6 +35,8 @@ def run(O, nameXP):
     with open(outputFile, "wb") as f:
         pickle.dump(MD3, f)
 
+print("Need 150 hours divided by the number of cores")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 

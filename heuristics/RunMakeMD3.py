@@ -36,6 +36,8 @@ def run(O, nameXP):
     with open(outputFile, "wb") as f:
         pickle.dump(MD, f)
 
+print("Need 5 minutes")
+
 if __name__ == '__main__':
     import sys
     sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 

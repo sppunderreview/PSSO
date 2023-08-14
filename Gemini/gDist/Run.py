@@ -13,6 +13,8 @@ import numpy as np
 def command(folder, id, maxId):
     return "python3 computeDistances.py "+folder+ " "+str(id)+" "+str(maxId)
 
+print("Need 100 hours divided by the number of cores")
+
 toDo = ["BO","BV","UO","UV","CO","CV"]
 
 for dir in toDo:

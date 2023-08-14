@@ -7,7 +7,7 @@ from random import seed, shuffle
 from multiprocessing import Process
 
 
-
+print("Need 150 hours divided by the number of cores")
 
 print("Enter number of cpu:") 
 PN = int(input())
