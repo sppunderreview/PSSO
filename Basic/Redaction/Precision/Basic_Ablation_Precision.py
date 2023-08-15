@@ -111,10 +111,10 @@ def readBasicAblationPrecision():
 			T += [sum(frameworkPlot[framework][nameField])/len(frameworkPlot[framework][nameField])]        
 		dataTable[framework]["AVG"] = "{:.2f}".format(sum(T)/len(T))
 
-	dfScenario = pd.DataFrame(dataTable).T
-	dfScenario.fillna(0, inplace=True)
-	print(dfScenario)	
+	#dfScenario = pd.DataFrame(dataTable).T
+	#dfScenario.fillna(0, inplace=True)
+	#print(dfScenario)	
 	return dataTable
 
-readBasicAblationPrecision()
+#readBasicAblationPrecision()
 

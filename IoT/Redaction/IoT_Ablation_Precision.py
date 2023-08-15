@@ -9,7 +9,7 @@ def correctNames(a):
 	a = a.replace("simCFG_D_5535", "simCFG")
 	return a
 
-def readIoTAblationPrecicion():
+def readIoTAblationPrecision():
 	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])    
 	frameworksData = {}
 	
@@ -64,4 +64,4 @@ def readIoTAblationPrecicion():
 	
 	return frameworksData
 
-#readIoTAblationPrecicion()
+#readIoTAblationPrecision()
