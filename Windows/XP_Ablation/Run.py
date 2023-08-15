@@ -11,16 +11,10 @@ from multiprocessing import Process
 with open("QB", "rb") as f:
     QB = pickle.load(f)
 
-with open("QB40k", "rb") as f:
-    QB40k = pickle.load(f)
-
-with open("QB20k", "rb") as f:
-    QB20k = pickle.load(f)
-
 with open("idSToName", "rb") as f:
     idSToName = pickle.load(f)
 
-LQB = [(QB20k, "QB20K"),(QB40k, "QB40k"), (QB, "QB")]
+LQB = [(QB, "QB")]
 
 # SHARED EMBEDS DATA
 EMBEDS_DATA = {}
@@ -79,7 +73,7 @@ if __name__ == '__main__':
 
     LC = [(distSimCG, "simCG"),(distSimCFG, "simCFG")]
 
-    for REPO_ID in [2]:
+    for REPO_ID in [0]:
         random.seed( RUN_ID ) # Seed the repository choices
 
         for (distF, nEmb) in LC:

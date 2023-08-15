@@ -47,8 +47,8 @@ def run(O, nameXP):
             fTotal[x] = fTotalCorrect[x]
 
     minRun(O, fTotal, "./"+nameXP+"_MD", distanceSP10)
-    #minRun(O, fTotal, "../spectralA/"+nameXP+"_MD", distanceA)
-    #minRun(O, fTotal, "../spectralB/"+nameXP+"_MD", distanceB)
+    minRun(O, fTotal, "../simCG/"+nameXP+"_MD", distanceA)
+    minRun(O, fTotal, "../simCFG/"+nameXP+"_MD", distanceB)
 
 if __name__ == '__main__':
     import sys

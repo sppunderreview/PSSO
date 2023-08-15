@@ -45,8 +45,8 @@ def minRun(O, folder, nameXP):
 
 def run(O, nameXP):
     minRun(O, "./", nameXP)
-    #minRun(O, "../spectralA/",  nameXP)
-    #minRun(O, "../spectralB/",  nameXP)
+    minRun(O, "../simCG/",  nameXP)
+    minRun(O, "../simCFG/",  nameXP)
     
 if __name__ == '__main__':
     import sys
