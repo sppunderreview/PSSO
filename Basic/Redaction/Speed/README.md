@@ -1,6 +1,8 @@
 # Preliminary Evaluation, Method Selection
 ## Correction Tables 4 and 5
-Issue : Each Basic subdataset has six different test fields (e.g., O0O1, O0O2, O0O3, O1O2, O1O3, O2O3).
+
+**Issue:**
+Each Basic subdataset has six different test fields (e.g., O0O1, O0O2, O0O3, O1O2, O1O3, O2O3).
 Since a program is inside three test fields, we perform three clone searches for each program.
 In this regard, we had to measure each program's preprocessing three times in total runtimes, but we counted it only once.
 
