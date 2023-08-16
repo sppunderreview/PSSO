@@ -1,12 +1,15 @@
 # RQ1: Evaluation of Speed (Windows)
-## Correction
-Initially, for PSS and ASCG preprocessing, 30 very large target programs out of a total of 49,443 were run with multiple processors. A coefficient was applied to recover a comparable runtime for query preprocessing. We have replaced this estimate with a computation with one processor. The initial estimation was too optimistic, and the larger and heavier programs are particularly slow on PSS, noticeably influencing the average.
+## Correction Tables 5 and 6
+
+**Issue:**
+We realized that the reported results  for PSS and ASCG preprocessings were incorrect for 30 very large target programs out of a total of 49,443. It turns out that the PSS preprocessing step is really slow on these examples, noticeably influencing the average -- and demonstrating even more the need for our PSSO optimization. 
+
 
 Prior to this correction, PSS mean preprocessing runtime was 13.42 seconds, and the median was 0.12563, with a minimum runtime of 0.00139 and a maximum runtime of 10,074 seconds. 
  
-Following the correction, the median remained at 0.12563, with the minimum still at 0.00139. However, the maximum runtime increased to 19,988 seconds, and the mean was 16.95 seconds.
+Following the correction, the median remains at 0.12563, with the minimum still at 0.00139. However, the maximum runtime increases to 19,988 seconds, and the mean is now 16.95 seconds.
 
-On average, there is an increase of around 3.5 seconds in the preprocessing for PSS and ASCG. Overall, the total runtime required for PSS went up from 215 hours to 263 hours.  The runtime per clone search for PSS increased from 15.64 to 19.17 seconds. 
+On average, there is an increase of around 3.5 seconds in the preprocessing time for PSS and ASCG for Table 6. The runtime per clone search for PSS increased from 15.64 to 19.17 seconds. Overall, the total runtime for Table 5 required for PSS went up from 215 hours to 263 hours.  
 
 This is an increase of 26.3% at the preprocessing level and 22.6% for an entire clone search for PSS and ASCG. 
 
