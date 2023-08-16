@@ -107,9 +107,10 @@ Experiment folders such as  `XP`  include `Run.py` scripts for conducting clone 
 Lastly, the `Redaction` subdirectory in each dataset includes scripts for computing tables from the results of experiment folders.
 
 ## Corrections
-We have corrected two measurements in the Camera Ready version of our article:
-- We had to multiply the preprocessing runtimes of PSS, PSSO and ASCG by 3 on the Basic dataset. Even after that, PSS remains 10 times faster than the fastest method previously eliminated. See [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details.
-- We had to correct the preprocessing runtimes of PSS and ASCG on 30 large target programs over 49,443 on the Windows dataset. See [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details.
+We have corrected two minor measurement errors in the Camera Ready version of our article, yielding results slightly different from those mentioned in the  submitted version for Tables 4, 5, and 6.
+- We had to multiply the preprocessing runtimes of PSS, PSSO and ASCG by 3 on the Basic dataset experimental report. Yet, even after that, PSS remains 10 times faster than the fastest method previously eliminated in the preliminary experiment (Section 5.4 of the article). See [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details.
+- We had to correct the reported preprocessing runtimes of PSS and ASCG on 30 large target programs over 49,443 on the Windows dataset. See [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details. Note that this does not affect our optimized version PSSO.
+
 
 ## Abstract
 We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection.
