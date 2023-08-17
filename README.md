@@ -87,7 +87,7 @@ cd AlphaDiff/Embeds/
 python3 MakeEmbeds.py
 ```
 
-Then, a distance computation phase of around 20 hours using 40 cores and 100 GB of RAM.
+Then, a distance computation phase of between 18 and 40 hours using 40 cores and 100 GB of RAM.
 ```bash
 cd AlphaDiff/AD_gDist/
 python3 Run.py
