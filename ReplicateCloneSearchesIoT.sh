@@ -1,4 +1,4 @@
-# Replicate clone searches, without the preprocssing step, for the IoT Dataset
+# Replicate clone searches, without the preprocessing step, for the IoT Dataset
 
 echo 'IoT dataset clone searches, without the preprocssing step'
 echo 'Takes around 31 hours roughly divided by the number of cores used (40), thus between 1 hours and 3 hours'

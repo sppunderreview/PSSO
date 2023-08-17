@@ -57,13 +57,9 @@ EMBEDS_DATA = {}
 for nEmb in ["PSSV16"]:
     with open("EMBEDS/"+nEmb, "rb") as f:
         EMBEDS_DATA[nEmb] = pickle.load(f)
-EMBEDS_DATA["LIBDX_N"] = EMBEDS_DATA["LIBDX"]
 
 # SHARED WEIGHTS
 WEIGHTS_DATA = {}
-for (QBI, nQBI) in LQB:
-        B = [idS for idS in QBI[1]]
-        WEIGHTS_DATA[nQBI] = computeWeights(B, EMBEDS_DATA["LIBDX"])
 
 def computeMatchingMask(S):
     P_Flag = [ 0 for i in range(len(S))]

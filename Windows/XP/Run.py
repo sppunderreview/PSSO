@@ -54,10 +54,9 @@ LQB = [(QB, "QB")]
 
 # SHARED EMBEDS DATA
 EMBEDS_DATA = {}
-for nEmb in ["LIBDX", "SHAPE", "BSIZE", "DSIZE", "MUTANTX", "PSS", "PSSV12", "GSA", "FUNCTIONSET"]:
+for nEmb in ["LIBDX", "SHAPE", "BSIZE", "DSIZE", "MUTANTX", "PSS", "GSA", "FUNCTIONSET"]:
     with open("EMBEDS/"+nEmb, "rb") as f:
         EMBEDS_DATA[nEmb] = pickle.load(f)
-EMBEDS_DATA["LIBDX_N"] = EMBEDS_DATA["LIBDX"]
 
 # SHARED WEIGHTS
 WEIGHTS_DATA = {}
@@ -283,7 +282,7 @@ if __name__ == '__main__':
     P = 40
     RUN_ID = 5
 
-    LC = [(distancePSS12, "PSSV12"),(distLibDX, "LIBDX_N"),(distLibDX, "LIBDX"),(distSHAPE, "SHAPE"),(distEuclid, "BSIZE"), (distEuclid, "DSIZE"),(distPSS, "PSS"), (distSCG, "GSA"),(distFS, "FUNCTIONSET"),(distEuclid, "MUTANTX")]
+    LC = [(distLibDX, "LIBDX"),(distSHAPE, "SHAPE"),(distEuclid, "BSIZE"), (distEuclid, "DSIZE"),(distPSS, "PSS"), (distSCG, "GSA"),(distFS, "FUNCTIONSET"),(distEuclid, "MUTANTX")]
 
     for REPO_ID in [0]:
         random.seed( RUN_ID ) # Seed the repository choices

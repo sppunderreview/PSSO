@@ -81,6 +81,23 @@ def readWindowsSpeedRQ1():
 		   if os.path.isfile(inputFile):
 			   with open(inputFile, "rb") as f:
 				   RESULTS += pickle.load(f)
+
+	# StringSet experience if new computations 
+	ID_RUN = 4
+	P = 6
+	nQBI = "QB"
+	nEmb = "STRINGS"
+	RESULTS_NEW = []
+	for pId in range(P):
+	   for RUN in [""]:
+		   inputFile = os.path.join(ABS_PATH,"../StringSet/R/R"+RUN+"_"+nQBI+"_"+nEmb+"_"+str(pId)+"_"+str(ID_RUN))
+		   if os.path.isfile(inputFile):
+			   with open(inputFile, "rb") as f:
+				   RESULTS_NEW += pickle.load(f)    
+	# Replace old xp with new xp if possible
+	if len(RESULTS_NEW) > 0:
+		RESULTS = RESULTS_NEW
+
 	ACC = {}
 	T = {}
 	for i in range(0,len(RESULTS),3):
