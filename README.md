@@ -49,7 +49,20 @@ The artifact features four datasets:
 - Due to size constraints and copyright issues respectively, complete disassembled files and software aren't included inside `BinKit` and `Windows` folders. However, setup for disassembly and feature extraction reproduction is included. The BinKit dataset is readily accessible [here](https://github.com/SoftSec-KAIST/BinKit).
 
 ## Usage - Basic Dataset
-For Basic dataset computation, ensure you have run `python3 SetAbsolutePath.py`.
+
+### Replication Script
+To replicate clone searches on the Basic dataset with all methods without any preprocessing phases, use the script provided:
+
+```bash
+conda activate PSS_Base
+python3 SetAbsolutePath.py
+bash ReplicateCloneSearchesBasic.py
+```
+
+It requires 40 cores and at least 100 GB of memory and should run for between 140 hours and 350 hours.
+
+### Generalities
+For Basic dataset computations, ensure you have run `python3 SetAbsolutePath.py`.
 
 Inside a method folder:
 - `RunMakeMD3.py` will compute all similarity indices using precomputed features.
@@ -88,6 +101,20 @@ python3 RunMakeMD.py
 ```
 
 ## Usage - BinKit Dataset
+
+### Replication Script
+
+To replicate clone searches on the BinKit dataset without any preprocessing phases, use the script provided:
+
+```bash
+conda activate PSS_Base
+bash ReplicateCloneSearchesBinKit.py
+```
+
+It requires 40 cores and at least 100 GB of memory and should run for between 80 hours and 200 hours.
+
+### Generalities
+
 The `BinKit` directory has two subdirectories, namely, `Obfus`, which deals with obfuscated programs, and `Normal`. 
 Each subdirectory entails a `DataGeneration` folder which holds the disassembly scripts, and a unique folder for each method.
 These method folders have scripts to extract features and embeds from samples.
@@ -100,6 +127,30 @@ Each subdirectory contains three significant scripts:
 The `Redaction` subdirectory within `BinKit` holds scripts that compute tables based on results obtained within each subdataset.
 
 ## Usage - IoT and Windows Datasets
+
+### Replication Script - IoT
+To replicate clone searches on the IoT malware dataset without any preprocessing phases, use the script provided:
+
+```bash
+conda activate PSS_Base
+bash ReplicateCloneSearchesIoT.py
+```
+
+It requires 40 cores and at least 100 GB of memory and should run for between 1 hours and 3 hours.
+
+### Replication Script - Windows
+
+To replicate clone searches on the Windows dataset without any preprocessing phases, use the script provided:
+
+```bash
+conda activate PSS_Base
+bash ReplicateCloneSearchesWindows.py
+```
+
+It requires 40 cores and at least 100 GB of memory and should run for between 55 hours and 140 hours.
+
+### Generalities
+
 Both `IoT` and `Windows` folders contain a `DataGeneration` subdirectory with disassembly scripts and scripts for each method to extract features and embeddings from samples. 
 Additionally, each dataset has a `DataLabelling` subdirectory, which contains scripts for labeling data. 
 
