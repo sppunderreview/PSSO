@@ -26,7 +26,6 @@ def run(O, nameXP):
                         if distances[i][j] != 0:
                             distancesFinal[i][j] = distances[i][j]
                             t += 1
-    print(nameXP, "TOTAL", t)
             
     elapsedFinal = [[0 for i in range(numberPrograms)] for j in range(numberPrograms)]
     for idCore in range(P):

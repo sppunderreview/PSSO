@@ -67,7 +67,7 @@ def run(OA, OB, idP, maxID, nameXP):
                 f.write(str([idP,idS,idS2,dL,elpased, totalT/N, totalT, N])+"\n")
         i += 1
  
- print("Need 170 hours divided by the number of cores")
+print("Need 170 hours divided by the number of cores")
  
 if __name__ == '__main__':
     import sys
