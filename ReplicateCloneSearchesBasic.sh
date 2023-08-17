@@ -1,5 +1,5 @@
 # Replicate clone searches, without the preprocessing step, for the Basic Dataset
-echo 'Basic dataset clone searches, without the preprocssing step'
+echo 'Basic dataset clone searches, without the preprocessing step'
 echo 'Takes around 5650 hours roughly divided by the number of cores used (usually 40), thus between 140 hours and 350 hours'
 
 echo 'Alpha Diff'

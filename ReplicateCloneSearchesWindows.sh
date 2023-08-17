@@ -1,6 +1,6 @@
 # Replicate clone searches, without the preprocessing step, for the Windows Dataset
 
-echo 'Windows dataset clone searches, without the preprocssing step'
+echo 'Windows dataset clone searches, without the preprocessing step'
 echo 'Takes around 600 hours roughly divided by the number of cores used (40, 40 and 6), thus between 55 hours and 140 hours'
 
 

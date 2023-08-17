@@ -1,6 +1,6 @@
 # Replicate clone searches, without the preprocessing step, for the BinKit Dataset
 
-echo 'BinKiT dataset clone searches, without the preprocssing step'
+echo 'BinKiT dataset clone searches, without the preprocessing step'
 echo 'Takes around 3150 hours roughly divided by the number of cores used (40), thus between 80 hours and 200 hours'
 
 cd BinKit/
@@ -35,4 +35,4 @@ cp ELAPSED_SCs_OBF ../Redaction/
 cd ../
 
 cd Redaction/
-cat NORMAL.txt <( echo) OBFS.txt > RESULTS_2.txt
+cat NORMAL.txt <( echo) OBFS.txt > RESULTS.txt
