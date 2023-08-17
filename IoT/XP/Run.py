@@ -255,8 +255,7 @@ def minRun(pId, Q, B, E, T,  maxId, distF, nEmb, RUN_ID):
 
 
 if __name__ == '__main__':
-    LC = [(distPSS16, "PSS16")]    
-    #LC = [(distStrings, "STRINGS"),(distLibDX, "LIBDX_N"),(distLibDX, "LIBDX"),(distEuclid, "MUTANTX"),(distEuclid,"BSIZE"),(distEuclid, "DSIZE"),(distPSS, "PSS_D_5535"), (distSCG, "SCG_D_5535"), (distSHAPE, "SHAPE"),(distFS, "FUNCTIONSET")]
+    LC = [(distStrings, "STRINGS"),(distLibDX, "LIBDX"),(distEuclid, "MUTANTX"),(distEuclid,"BSIZE"),(distEuclid, "DSIZE"),(distPSS, "PSS_D_5535"), (distSCG, "SCG_D_5535"), (distSHAPE, "SHAPE"),(distFS, "FUNCTIONSET")]
 
     RUN_ID = 4
 
