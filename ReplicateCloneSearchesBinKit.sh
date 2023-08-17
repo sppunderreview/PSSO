@@ -1,6 +1,6 @@
 # Replicate clone searches, without the preprocssing step, for the BinKit Dataset
 
-echo 'BinKiT dataset clone searches'
+echo 'BinKiT dataset clone searches, without the preprocssing step'
 echo 'Takes around 3150 hours roughly divided by the number of cores used (40), thus between 140 hours and 240 hours'
 
 cd BinKit/
