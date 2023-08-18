@@ -20,12 +20,12 @@ print("Need 1 minute")
 
 if __name__ == '__main__':
     import sys
-    sys.path.insert(0, "/home/tristan/Documents/TransfertGit/PSSO/Basic/GBigOptions") # PSS_PATH_BASIC_BO 
-    sys.path.insert(0, "/home/tristan/Documents/TransfertGit/PSSO/Basic/GBigVersions") # PSS_PATH_BASIC_BV 
-    sys.path.insert(0, "/home/tristan/Documents/TransfertGit/PSSO/Basic/GCoreutilsVersions") # PSS_PATH_BASIC_CV 
-    sys.path.insert(0, "/home/tristan/Documents/TransfertGit/PSSO/Basic/GCoreutilsOptions") # PSS_PATH_BASIC_CO 
-    sys.path.insert(0, "/home/tristan/Documents/TransfertGit/PSSO/Basic/GUtilsVersions") # PSS_PATH_BASIC_UV 
-    sys.path.insert(0, "/home/tristan/Documents/TransfertGit/PSSO/Basic/GUtilsOptions") # PSS_PATH_BASIC_UO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_BV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_CO 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UV 
+    sys.path.insert(0, "????") # PSS_PATH_BASIC_UO 
 
     from makeBenchBO import readAllSamples as allBO
     from makeBenchBV import readAllSamples as allBV
