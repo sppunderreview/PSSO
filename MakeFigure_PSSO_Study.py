@@ -37,7 +37,7 @@ plt.scatter(PreproTimes, PrecisionScore)
 for i, txt in enumerate(X):
     ax.annotate(txt, (PreproTimes[i], PrecisionScore[i]), xytext=(PreproTimes[i], PrecisionScore[i]+0.00005) )
 
-ax.set_xlabel('Average Prepro. Runtime per Program (sec) on the Windows dataset')
+ax.set_xlabel('Average Preprocessing Runtime per Program (sec) on the Windows dataset')
 ax.set_ylabel('Precision Score on the Windows dataset')
 
 print(X)

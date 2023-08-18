@@ -1,6 +1,11 @@
 import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pickle
 import pandas as pd
+
+from Windows_Precision_RQ2_Random import readWindowsPrecisionRQ2Random
 
 def correctNames(a):
 	a = a.replace("PSSV16", "PSSO")
@@ -92,6 +97,10 @@ def readWindowsPrecisionRQ2():
 		ACC += [RESULTS[i]]
 	frameworksData["PSSO"] = {}
 	frameworksData["PSSO"]["AVG"] = "{:.3f}".format(sum(ACC)/len(ACC))
+	
+	# Random choice
+	frameworksData["Random"] = {}
+	frameworksData["Random"]["AVG"] = "{:.3f}".format(readWindowsPrecisionRQ2Random())
 
 	#df = pd.DataFrame(frameworksData).T
 	#df.fillna(0, inplace=True)		

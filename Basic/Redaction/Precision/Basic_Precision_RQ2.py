@@ -8,7 +8,7 @@ import random
 def readBasicPrecisionRQ2():
 	ABS_PATH = "/".join(os.path.abspath(__file__).split("/")[:-1])
 
-	frameworks = ["Bsize","Dsize","Shape", "ASCG", "MutantX-S","PSS","PSSO","LibDX","StringSet","FunctionSet"]
+	frameworks = ["Bsize","Dsize","Shape", "ASCG", "MutantX-S","PSS","PSSO","LibDX","StringSet","FunctionSet","Random"]
 
 
 	XPS  =  [("CO",["CO0O1","CO0O2","CO0O3", "CO1O2", "CO1O3", "CO2O3"]),("UO",["UO0O1","UO0O2","UO0O3", "UO1O2", "UO1O3", "UO2O3"]),("BO",["BO0O1","BO0O2","BO0O3", "BO1O2", "BO1O3", "BO2O3"])]

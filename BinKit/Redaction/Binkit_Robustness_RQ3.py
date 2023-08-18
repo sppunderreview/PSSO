@@ -1,5 +1,11 @@
 import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pandas as pd
+
+from Binkit_Robustness_RQ3_Random import readBinkitRobustnessRQ3Random
+
 
 def correctNames(a):
 	a = a.replace("PSSV16", "PSSO")
@@ -42,6 +48,17 @@ def readBinkitRobustnessRQ3():
 			testfields[tf][m] =  sum(testfields[tf][m])/len(testfields[tf][m])
 			testfields[tf][m] =  "{0:.2f}".format(testfields[tf][m])
 
+	# Random choice
+	randomResults = readBinkitRobustnessRQ3Random()
+	
+	for testfield in randomResults:
+		st = testfield.split("_VS_")
+		st = sorted(st)
+		st = "_VS_".join(st)
+		if st != testfield:
+			testfields[st]["Random"] = "{0:.2f}".format((randomResults[testfield] + randomResults[st])/2)
+		
+	
 	selected  = ["O0_VS_O1","O0_VS_O2","O0_VS_O3","O1_VS_O2","O1_VS_O3","O2_VS_O3", "gcc-4.9.4_VS_gcc-8.2.0", "clang-4.0_VS_clang-7.0", "clang_VS_gcc"]
 	selected += ["clang-obfus-bcf_VS_normal","clang-obfus-fla_VS_normal","clang-obfus-sub_VS_normal","clang-obfus-all_VS_normal"]
 
@@ -78,3 +95,5 @@ def readBinkitRobustnessRQ3():
 	print(df)
 	
 	return tableWithGoodNames
+
+#readBinkitRobustnessRQ3()

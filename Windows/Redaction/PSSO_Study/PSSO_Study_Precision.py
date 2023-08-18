@@ -32,4 +32,4 @@ def readPSSOStudyPrecision():
 		tablePrecision[nEmb] = S/len(ACC)
 	return tablePrecision
 	
-print(readPSSOStudyPrecision())
+#print(readPSSOStudyPrecision())

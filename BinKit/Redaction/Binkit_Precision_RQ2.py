@@ -1,5 +1,11 @@
 import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pandas as pd
+
+from Binkit_Precision_RQ2_Random import readBinkitPrecisionRQ2Random
+
 
 def correctNames(a):
 	a = a.replace("PSSV16", "PSSO")
@@ -60,10 +66,15 @@ def readBinkitPrecisionRQ2():
 		m = correctNames(m)
 		frameworkPlot[m] = {}
 		frameworkPlot[m]["AVG"] = "{:.3f}".format(score)
+
+	# Random choice
+	frameworkPlot["Random"] = {}
+	frameworkPlot["Random"]["AVG"] = "{:.3f}".format(readBinkitPrecisionRQ2Random())
 		
 	#df = pd.DataFrame(frameworkPlot).T
 	#df.fillna(0, inplace=True)
 	#print(df)	
+
 	return frameworkPlot
 
 #readBinkitPrecisionRQ2()

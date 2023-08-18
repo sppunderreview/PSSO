@@ -1,6 +1,11 @@
 import os
+import sys
+sys.path.append("/".join(os.path.abspath(__file__).split("/")[:-1]))
+
 import pandas as pd
 import pickle
+
+from IoT_Precision_RQ2_Random import readIoTPrecisionRQ2Random
 
 def correctNames(a):
 	a = a.replace("PSS_D_5535", "PSS")
@@ -65,7 +70,11 @@ def readIoTPrecicionRQ2():
 		frameworksData[f]["AVG"] = "{:.3f}".format(S/len(ACC)) 
 		#print(nEmb, S, len(ACC), S/len(ACC), TSC, TSC/len(ESC))
 
-	
+
+	# Random choice
+	frameworksData["Random"] = {}
+	frameworksData["Random"]["AVG"] = "{:.3f}".format(readIoTPrecisionRQ2Random())
+
 	#df = pd.DataFrame(frameworksData).T
 	#df.fillna(0, inplace=True)
 	#print(df)
