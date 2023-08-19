@@ -1,4 +1,4 @@
-# Mattias Andrée
+# Mattias Andrée and Sam Hocevar
 
 𝓞(n³) implementation of the Hungarian algorithm, also known as the Hungarian method, Kuhn–Munkres algorithm or Munkres assignment.
 
