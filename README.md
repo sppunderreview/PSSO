@@ -27,8 +27,11 @@ In order to clone this repository, you will need git-lfs first, please refer to 
 
 ## Examples of Use
 
-1. Activate the environment with `conda activate PSS_Base`
-2. Run `python3 MakeTables.py` 
+```bash
+conda activate PSS_Base
+python3 MakeTables.py
+python3 MakeAblationTables.py
+```
 
 The above will produce in a few minutes the Tables of the Camera Ready version of our article using precomputed results.
 
@@ -156,6 +159,29 @@ Additionally, each dataset has a `DataLabelling` subdirectory, which contains sc
 
 Experiment folders such as  `XP`  include `Run.py` scripts for conducting clone searches using precomputed embeddings. 
 Lastly, the `Redaction` subdirectory in each dataset includes scripts for computing tables from the results of experiment folders.
+
+## PSSO Study
+
+To replicate clone searches for the PSSO Study on the Windows dataset, without any preprocessing phases, use the script provided:
+
+```bash
+conda activate PSS_Base
+bash ReplicateCloneSearchesPSSOStudy.py
+```
+
+It requires 40 cores and at least 100 GB of memory and should run for between 4 hours and 10 hours.
+
+## Ablation Study
+
+To replicate clone searches for the Ablation Study, without any preprocessing phases, use the script provided:
+
+```bash
+conda activate PSS_Base
+bash ReplicateCloneSearchesAblation.py
+```
+
+It requires 40 cores and at least 100 GB of memory and should run for between 7 hours and 18 hours.
+
 
 ## Corrections
 We have corrected two minor measurement errors in the Camera Ready version of our article, yielding results slightly different from those mentioned in the  submitted version for Tables 4, 5, and 6.
