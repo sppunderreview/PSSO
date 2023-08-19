@@ -133,7 +133,7 @@ All Tables generated in 101.85 s
 See [EXAMPLES.md](EXAMPLES.md) for five quick examples of replications using this artifact.
 
 ## Software for Asm2Vec
-To reproduce Asm2Vec experiments, you will need Eclipse IDE with JDK 11.
+To fully reproduce Asm2Vec experiments, you will need Eclipse IDE with JDK 11.
 
 You can install it by following the instructions [on the Eclipse website]( https://eclipseide.org/).
 
