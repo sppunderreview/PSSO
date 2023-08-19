@@ -15,7 +15,7 @@ To tackle these time and space constraints, we have ensured that precomputed dat
 
 ## Requirements
 
-This artifact requires a storage capacity of 130 GB and a computer with a Debian system and conda package management installed.
+This artifact requires a storage capacity of 140 GB and a computer with a Debian system and conda package management installed.
 
 Disassembling binaries, which is optional, requires IDA Pro with a version close to 7.5.
 
