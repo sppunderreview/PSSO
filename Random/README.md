@@ -1,3 +1,3 @@
 # Random
 
-## Select a candidate from the repostiory at random
+## Select a candidate from the repository at random
