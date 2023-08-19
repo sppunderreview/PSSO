@@ -126,6 +126,6 @@ def readBasicRobustness_RQ3():
 				T = "{"+"{0:.2f}".format(dataPoints[framework][nameDS]) + "}"        
 			dataPoints[framework][nameDS] = T
 
-	print("Table (RQ3) Average rank-biserial correlation for H on the Basic dataset.")
+	print("Table 9 (RQ3) Average rank-biserial correlation for H on the Basic dataset.")
 	df = pd.DataFrame(dataPoints).transpose()
 	print(df)

@@ -91,7 +91,7 @@ def readBinkitRobustnessRQ3():
 			tableWithGoodNames[x][f] = testfieldsS[x][y]
 		
 	df = pd.DataFrame(tableWithGoodNames)
-	print("Table (RQ2,RQ3) Precision scores on the BinKit dataset.")
+	print("Table 8 (RQ2,RQ3) Precision scores on the BinKit dataset.")
 	print(df)
 	
 	return tableWithGoodNames

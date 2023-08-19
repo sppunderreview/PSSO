@@ -101,7 +101,7 @@ def readBasicSpeedTotalRQ1():
 	dfSISpeed = pd.DataFrame(frameworksData).T
 	dfSISpeed.fillna(0, inplace=True)
 
-	print("Table (Preliminary Evaluation) Total runtimes on the Basic dataset")
+	print("Table 4 (RQ0) Total runtimes on the Basic dataset")
 	print(dfSISpeed)
 
 
