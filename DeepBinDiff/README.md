@@ -1,25 +1,14 @@
 # README
-This README come from DeepBinDiff official repository: https://github.com/yueduan/DeepBinDiff
+This README is an adaptation from DeepBinDiff official repository README: https://github.com/yueduan/DeepBinDiff
 
 # DeepBinDiff
 
-This is the official repository for DeepBinDiff, which is a fine-grained binary diffing tool for x86 binaries. We will actively update it.
+DeepBinDiff is a fine-grained binary diffing tool for x86 binaries.
 
 ### Paper
-Please consider citing our paper.
+Please consider citing their paper.
 
 Yue Duan, Xuezixiang Li, Jinghan Wang, and Heng Yin, "DeepBinDiff: Learning Program-Wide Code Representations for Binary Diffing", NDSS'2020
-
-
-### Requirements:
-
-* tensorflow (2.0 > tensorflow version >= 1.14.0)
-* gensim
-* angr
-* networkx
-* lapjv
-
-
 
 ### Run the tool
 
@@ -41,7 +30,7 @@ python3 src/deepbindiff.py --input1 /home/DeepBinDiff/experiment_data/coreutils/
 ### Misc
 1. IDA Pro or Angr?
 
-We have both the IDA pro version and the angr version. IDA pro is used in order to directly compare with BinDiff, which uses IDA pro as well. The code here uses Angr.
+They have both the IDA pro version and the angr version. IDA pro is used in order to directly compare with BinDiff, which uses IDA pro as well. The code here uses Angr.
 
 2. Results?
 
@@ -53,4 +42,4 @@ The current version is using CPU only.
 
 4. NLP pre-training?
 
-The current version uses an on-the-fly training process, meaning we only use the two input binaries for NLP training. Therefore, we don't need any pre-trained model. This will eliminate the OOV problem but will slow down the process a bit.
+The current version uses an on-the-fly training process, meaning they only use the two input binaries for NLP training. Therefore, they don't need any pre-trained model. This will eliminate the OOV problem but will slow down the process a bit.
