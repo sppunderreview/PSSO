@@ -11,5 +11,5 @@ Please refer to the INSTALL file for instructions on how to install the three ne
 
 ## Optional Requirements:
 - IDA Pro for disassembly reiteration (Version 7.5 or a version close to this is preferred).
-- For major experiments a RAM capacity of 100 GB is needed.
+- For major experiments a RAM capacity of 100 GB and 40 cores are needed.
 
