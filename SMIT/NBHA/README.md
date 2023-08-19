@@ -1,3 +1,5 @@
+# Mattias Andrée
+
 𝓞(n³) implementation of the Hungarian algorithm, also known as the Hungarian method, Kuhn–Munkres algorithm or Munkres assignment.
 
 The Hungarian algorithm solves the minmum bipartite matching problem in 𝓞(n⁴).
@@ -10,3 +12,6 @@ However this implemention achives 𝓞(n³) by not using a priority queue.
 
 Edmonds and Karp, and independently Tomizawa, has also reduced the time complexity to 𝓞(n³), but I do not known how.
 
+# Tristan Benoit
+
+Modified to perform SMIT specific graph edit distance computation. The 𝓞(n³) is lost in the process.
