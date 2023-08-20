@@ -42,7 +42,7 @@ See [EXAMPLES.md](EXAMPLES.md) for five quick examples of replications using thi
 
 ### Software 
 
-The artifact includes implementations of 21 distinct clone search methods, comprising 6 new methods and 15 methods adapted or reimplemented from preceding works in the field.
+The artifact includes implementations of 21 distinct clone search methods, comprising 4 new methods, 3 baselines and 14 methods adapted or reimplemented from preceding works in the field.
 
 Proprietary software [IDA Pro](https://hex-rays.com/ida-pro/) disassembler v7.5 and [Gorille](https://cyber-detect.com/en/gorille/) cfgbuilder could not be incorporated into this artifact.
 
