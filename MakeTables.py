@@ -56,7 +56,7 @@ windowsSpeed = readWindowsSpeedRQ1()
 
 print("Table 5 (RQ1) Total runtimes.\nInclude preprocessing time.\nSignificant preprocessing times reported in \"( )\".")
 basicSpeedTotal = selectColumnAndName(basicSpeed, "Total", "Basic")
-binkitSpeedTotal = selectColumnAndName(binkitSpeed, "Total", "BinKiT")
+binkitSpeedTotal = selectColumnAndName(binkitSpeed, "Total", "BinKit")
 iotSpeedTotal = selectColumnAndName(iotSpeed, "Total", "IoT")
 windowsSpeedTotal = selectColumnAndName(windowsSpeed, "Total", "Windows")
 
@@ -65,7 +65,7 @@ printTable(tableSpeedTotal)
 
 print("Table 6 (RQ1) Runtimes per clone search (sec).\nInclude preprocessing time.\nSignificant preprocessing times reported in \"( )\".")
 basicSpeedAVG = selectColumnAndName(basicSpeed, "AVG", "Basic")
-binkitSpeedAVG = selectColumnAndName(binkitSpeed, "AVG", "BinKiT")
+binkitSpeedAVG = selectColumnAndName(binkitSpeed, "AVG", "BinKit")
 iotSpeedAVG = selectColumnAndName(iotSpeed, "AVG", "IoT")
 windowsSpeedAVG = selectColumnAndName(windowsSpeed, "AVG", "Windows")
 
@@ -75,11 +75,11 @@ printTable(tableSpeedAVG)
 
 print("Loading the RQ2 Table ...")
 basicPrecision = selectColumnAndName(readBasicPrecisionRQ2(), "AVG", "Basic")
-binkitPrecision = selectColumnAndName(readBinkitPrecisionRQ2(), "AVG", "BinKiT")
+binkitPrecision = selectColumnAndName(readBinkitPrecisionRQ2(), "AVG", "BinKit")
 iotPrecision = selectColumnAndName(readIoTPrecicionRQ2(), "AVG", "IoT")
 windowsPrecision = selectColumnAndName(readWindowsPrecisionRQ2(), "AVG", "Windows")
 
-print("Table 7 (RQ2) Precision Scores.")
+print("Table 7 (RQ2) Precision scores")
 tableSpeedAVG = fusionTables(basicPrecision, binkitPrecision, iotPrecision, windowsPrecision)
 printTable(tableSpeedAVG)
 

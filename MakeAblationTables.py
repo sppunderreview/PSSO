@@ -40,7 +40,7 @@ def printTable(t):
 	
 start = time.time()
 
-print("Table 10 (RQ4) PSS Components Precision Scores")
+print("Table 10 (RQ4) Components precision scores")
 basicPrecision = selectColumnAndName(readBasicAblationPrecision(), "AVG", "Basic")
 binkitPrecision = selectColumnAndName(readBinkitAblationPrecision(), "AVG", "BinKiT")
 binkitPrecision["PSS"] = selectColumnAndName(readBinkitPrecisionRQ2(), "AVG", "BinKiT")["PSS"]
@@ -50,7 +50,7 @@ windowsPrecision = selectColumnAndName(readWindowsAblationPrecision(), "AVG", "W
 tablePrecisionAVG = fusionTables(basicPrecision, binkitPrecision, iotPrecision, windowsPrecision)
 printTable(tablePrecisionAVG)
 
-print("Table 11 (RQ4) PSS Components Runtimes per clone search (sec)")
+print("Table 11 (RQ4) Components runtimes per clone search (sec)")
 basicSpeed = selectColumnAndName(readBasicAblationSpeed(), "AVG", "Basic")
 binkitSpeed = selectColumnAndName(readBinkitAblationSpeed(), "AVG", "BinKiT")
 binkitSpeed["PSS"] = selectColumnAndName(readBinkitSpeedRQ1(), "AVG", "BinKiT")["PSS"]
