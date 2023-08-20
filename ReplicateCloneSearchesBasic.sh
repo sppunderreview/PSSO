@@ -14,7 +14,7 @@ cp CO/*_* ../makeResults/CO/
 cp CV/*_* ../makeResults/CV/
 cd ../AD_gDistC/
 python3 Run.py
-cp BOC/* ../makeResults/BOC/
+cp BOC/*_* ../makeResults/BOC/
 cd ../makeResults/
 python3 RunMakeMD3.py
 python3 RunMakeMD.py
@@ -40,6 +40,12 @@ cd Asm2vec/gDist/
 cd ASM_BO_gDist/
 unzip vecByIds.zip
 python3 Run.py
+rm BO0O1/vecById
+rm BO0O2/vecById
+rm BO0O3/vecById
+rm BO1O2/vecById
+rm BO1O3/vecById
+rm BO2O3/vecById
 cd ../ASM_BV_gDist/
 python3 Run.py
 cd ../ASM_UO_gDist/
@@ -107,6 +113,12 @@ cp ../cleanEmbbeds/UV_vecByIdC UV/vecById
 cp ../cleanEmbbeds/CO_vecByIdC CO/vecById
 cp ../cleanEmbbeds/CV_vecByIdC CV/vecById
 python3 Run.py
+rm BO/vecById
+rm BV/vecById
+rm CO/vecById
+rm CV/vecById
+rm UO/vecById
+rm UV/vecById
 cp BO/*_* ../makeResults/BO/
 cp BV/*_* ../makeResults/BV/
 cp UO/*_* ../makeResults/UO/
@@ -116,7 +128,7 @@ cp CV/*_* ../makeResults/CV/
 cd ../makeResults/
 python3 RunMakeMD3.py
 python3 RunMakeMD.py
-cd ../
+cd ../../
 
 echo 'Heuristics'
 echo '1 minute'
@@ -181,7 +193,7 @@ cp BOC/*_* ../makeResults/BOC/
 cd ../makeResults
 python3 RunMakeMD3.py
 python3 RunMakeMD.py
-cd ../
+cd ../../
 
 echo 'Shape'
 echo '5  minutes'
