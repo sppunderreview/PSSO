@@ -80,7 +80,7 @@ python3 RunMakeMD.py
 cd ../
 
 echo 'GED-0'
-echo '80 hours divied by the number of cores (40)'
+echo '80 hours roughly divided by the number of cores (40)'
 cd GED-0/
 python3 Run.py
 python3 RunCorrect.py
@@ -89,7 +89,7 @@ python3 RunMakeMD.py
 cd ../
 
 echo 'GED-L'
-echo '50 hours divied by the number of cores (40)'
+echo '50 hours roughly divided by the number of cores (40)'
 cd GED-L/
 python3 Run.py
 python3 RunCorrect.py
@@ -98,7 +98,7 @@ python3 RunMakeMD.py
 cd ../
 
 echo 'Gemini'
-echo '100 hours divied by the number of cores (40)'
+echo '100 hours roughly divided by the number of cores (40)'
 cd Gemini/gDist/
 mkdir BO/
 mkdir BV/
