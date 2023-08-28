@@ -1,4 +1,4 @@
-# Artifact - Scalable Program Clone Search through Spectral Analysis
+# Artifacts - Scalable Program Clone Search through Spectral Analysis
 
 We focus on the problem of program clone search, which involves finding the program in a repository most similar to a target program. Program clone search has important applications, including malware detection and program clustering.
 
