@@ -62,7 +62,7 @@ For additional details, please consult [REQUIREMENTS.md](REQUIREMENTS.md).
 
 ## Installation
 
-In order to obtain this repository, you will either need to download the Zenodo record [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8289599.svg)](https://doi.org/10.5281/zenodo.8289599) or you will need git-lfs.
+In order to obtain this repository, you will either need to download the Zenodo record or you will need git-lfs.
 
 Please first refer to [INSTALL.md](INSTALL.md) for information on how to download the repository, install software packages, and set up conda environmnents.
 
