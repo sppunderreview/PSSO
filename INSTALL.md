@@ -27,7 +27,7 @@ sudo apt install p7zip
    python3 SetAbsolutePath.py
    ```
 
-### Download with Git LFS
+### Download with Git LFS (Legacy)
 
 1. Download Git LFS:
 
