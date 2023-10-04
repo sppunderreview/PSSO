@@ -15,7 +15,7 @@ sudo apt install p7zip
 
 ## 2. Download the Repository
 
-### Download Zenodo record (Recommanded)
+### Download with Zenodo (Recommanded)
 
 1. Navigate to the desired directory where you want to download the repository.
 2. Download every file (archive) of the Zenodo record [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8289599.svg)](https://doi.org/10.5281/zenodo.8289599). 
