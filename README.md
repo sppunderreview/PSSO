@@ -13,6 +13,45 @@ The artifact includes four datasets with vast numbers of programs: Basic (1K), B
 
 To tackle these time and space constraints, we have ensured that precomputed data are available within this artifact at multiple workflow phases. This enables a quick transition from reproducing one workflow phase to another. However, we could not include all disassembled files, so we mainly focused on the last phases, such as a clone search.
 
+## Article
+
+**Title**: Scalable Program Clone Search through Spectral Analysis
+
+**Authors**: Tristan Benoit, Jean-Yves Marion, Sébastien Bardin
+
+**Conference**: Proceedings of the 31th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2023)
+
+**DOI**: [10.1145/3611643.3616279](https://doi.org/10.1145/3611643.3616279).
+
+**Abstract**: We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection. Recent years have witnessed a blooming in code similarity techniques, yet most of them focus on function-level similarity while we are interested in program-level similarity. 
+Consequently, these recent approaches are not directly suited to program clone search, being either too slow to handle large code bases, not precise enough, or not robust against slight variations introduced by compilation or source code versions.  We introduce Programs Spectral Similarity (PSS), the first spectral analysis dedicated to program-level similarity. PSS reaches a sweet spot in terms of precision, speed and robustness. Especially, its one-time spectral feature extraction is tailored for large repositories of programs, making it a perfect fit for program clone search.
+
+![Architecture of a Program Clone Search Procedure](./ArchitectureProgramCloneSearchProcedure.png "Architecture of a Program Clone Search Procedure")
+
+To cite the article, use bibtex:
+```
+@inproceedings{pss2023,
+title = {Scalable Program Clone Search through Spectral Analysis},
+author = {Benoit, Tristan and Marion, Jean-Yves and Bardin, S{\'e}bastien},
+booktitle = {Proceedings of the 31th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+series = {ESEC/FSE 2023},
+doi = {10.1145/3611643.3616279},
+}
+```
+
+To cite the dataset, refer to the Zenodo record:
+```
+@misc{pss2023Artifacts,
+  author       = {Benoit, Tristan},
+  title        = {{Artifacts - Scalable Program Clone Search through Spectral Analysis}},
+  year         = 2023,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.8289599},
+  url          = {https://doi.org/10.5281/zenodo.8289599},
+  note = {Available at \url{https://doi.org/10.5281/zenodo.8289599}}
+}
+```
+
 ## Requirements
 
 This artifact requires a storage capacity of 140 GB and a computer with a Debian system and conda package management installed.
@@ -23,7 +62,9 @@ For additional details, please consult [REQUIREMENTS.md](REQUIREMENTS.md).
 
 ## Installation
 
-In order to clone this repository, you will need git-lfs first, please refer to [INSTALL.md](INSTALL.md).
+In order to obtain this repository, you will either need to download the Zenodo record [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8289599.svg)](https://doi.org/10.5281/zenodo.8289599) or you will need git-lfs.
+
+Please first refer to [INSTALL.md](INSTALL.md) for information on how to download the repository, install software packages, and set up conda environmnents.
 
 ## Examples of Use
 
@@ -189,15 +230,3 @@ It requires 40 cores and at least 100 GB of memory and should run for between 7 
 We have corrected two minor measurement errors in the Camera Ready version of our article, yielding results slightly different from those mentioned in the  submitted version for Tables 4, 5, and 6.
 - We had to multiply the preprocessing runtimes of PSS, PSSO and ASCG by 3 on the Basic dataset experimental report. Yet, even after that, PSS remains 10 times faster than the fastest method previously eliminated in the preliminary experiment (Section 5.4 of the article). See [Basic/Redaction/Speed/README.md](Basic/Redaction/Speed/README.md) for more details.
 - We had to correct the reported preprocessing runtimes of PSS and ASCG on 30 large target programs over 49,443 on the Windows dataset. See [Windows/Redaction/README.md](Windows/Redaction/README.md) for more details. Note that this does not affect our optimized version PSSO.
-
-
-## Abstract
-We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection.
-
-Recent years have witnessed a blooming in code similarity techniques, yet most of them focus on function-level similarity while we are interested in program-level similarity. 
-Consequently, these recent approaches are not directly suited to program clone search, being either too slow to handle large code bases, not precise enough, or not robust against slight variations introduced by compilation or source code versions. 
-
-We introduce Programs Spectral Similarity (PSS), the first spectral analysis dedicated to program-level similarity.
-PSS reaches a sweet spot in terms of precision, speed and robustness. Especially, its one-time spectral feature extraction is tailored for large repositories of programs, making it a perfect fit for program clone search.
-
-![Architecture of a Program Clone Search Procedure](./ArchitectureProgramCloneSearchProcedure.png "Architecture of a Program Clone Search Procedure")
