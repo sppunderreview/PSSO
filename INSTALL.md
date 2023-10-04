@@ -7,22 +7,40 @@ If you don't have Conda, you can install it by following the instructions [on th
 
 ## 1. Install Software Packages
 ```shell
-sudo apt install git
-sudo apt install git-lfs
 sudo apt install binutils
 sudo apt install zip
 sudo apt install p7zip
 ```
 
-If you have trouble installing git-lfs see the instructions [on the git-lfs repository](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md).
 
 ## 2. Download the Repository
 
+### Download Zenodo record (Recommanded)
+
 1. Navigate to the desired directory where you want to download the repository.
-2. Clone the repository using Git Large File Storage (LFS):
+2. Download every file (archive) of the Zenodo record [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8289599.svg)](https://doi.org/10.5281/zenodo.8289599). 
+3. Extract each archive.
+4. Combine all PSSO folders within each archive into a unique PSSO folder.
+5. Initialize paths:
+   ```shell
+   cd PSSO/
+   python3 SetAbsolutePath.py
+   ```
+
+### Download with Git LFS
+
+1. Download Git LFS:
 
    ```shell
-   git lfs clone -b 1.1.0 https://github.com/sppunderreview/PSSO.git
+   sudo apt install git
+   sudo apt install git-lfs
+   ```
+   If you have trouble installing Git LFS see the instructions [on the git-lfs repository](https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md).
+
+3. Navigate to the desired directory where you want to download the repository. 
+4. Clone the repository using Git LFS:
+   ```shell
+   git lfs clone https://github.com/sppunderreview/PSSO.git
    cd PSSO/
    python3 SetAbsolutePath.py
    ```
