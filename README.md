@@ -21,7 +21,7 @@ To tackle these time and space constraints, we have ensured that precomputed dat
 
 **Conference**: Proceedings of the 31th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2023)
 
-**DOI**: [10.1145/3611643.3616279](https://doi.org/10.1145/3611643.3616279).
+**DOI**: [10.1145/3611643.3616279](https://doi.org/10.1145/3611643.3616279)
 
 **Abstract**: We consider the problem of program clone search, i.e. given a target program and a repository of known programs (all in executable format), the goal is to find the program in the repository most similar to our target program – with potential applications in terms of reverse engineering, program clustering, malware lineage and software theft detection. Recent years have witnessed a blooming in code similarity techniques, yet most of them focus on function-level similarity while we are interested in program-level similarity. 
 Consequently, these recent approaches are not directly suited to program clone search, being either too slow to handle large code bases, not precise enough, or not robust against slight variations introduced by compilation or source code versions.  We introduce Programs Spectral Similarity (PSS), the first spectral analysis dedicated to program-level similarity. PSS reaches a sweet spot in terms of precision, speed and robustness. Especially, its one-time spectral feature extraction is tailored for large repositories of programs, making it a perfect fit for program clone search.
